@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="https://dohungthinhsts.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://dohungthinhsts.github.io/"/>
+  <updated>2023-05-02T03:25:33.905Z</updated>
+  <id>https://dohungthinhsts.github.io/</id>
+  
+  <author>
+    <name>ThinhDo</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>What is docker</title>
+    <link href="https://dohungthinhsts.github.io/2023/05/02/basic-docker/"/>
+    <id>https://dohungthinhsts.github.io/2023/05/02/basic-docker/</id>
+    <published>2023-05-02T05:00:00.000Z</published>
+    <updated>2023-05-02T03:25:33.905Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/2023/05/02/basic-docker/docker_avatar.png" class="" title="docker_avatar"></center><br><h2 id="What-is-Docker"><a href="#What-is-Docker" class="headerlink" title="What is Docker?"></a>What is Docker?</h2><p>Docker is a platform that allows developers to build, ship, and run applications in containers. Containers are isolated environments that include all the necessary dependencies and libraries needed to run the application. This helps ensure that the application runs consistently across different machines and environments, regardless of the underlying operating system or hardware.</p><h2 id="How-Does-Docker-Work"><a href="#How-Does-Docker-Work" class="headerlink" title="How Does Docker Work?"></a>How Does Docker Work?</h2><p>Docker works by using containerization technology. Containers are standalone packages that contain everything needed to run an application, including the code, runtime, system tools, libraries, and settings. Each container is isolated from the host system and other containers, making it easier to manage and deploy applications.</p><p>Docker uses a client-server architecture. The Docker client communicates with the Docker daemon to build, run, and manage containers. Docker images are used as templates to create containers, with each image containing a specific version of an application and all its dependencies.</p><p>Here’s a step-by-step breakdown of how Docker works:</p><ul><li><b>Create a Dockerfile</b>: A Dockerfile is a script that defines the application’s environment, including its dependencies and how it should be configured. The Dockerfile is used to build a Docker image.</li></ul><center><img src="/2023/05/02/basic-docker/Dockerfile.png" class="" title="Dockerfile"></center><ul><li><b>Build the Docker Image</b>: Using the Dockerfile, the Docker image is built. This image contains everything needed to run the application, including the code, dependencies, and configuration.</li></ul><center><img src="/2023/05/02/basic-docker/docker_images.png" class="" title="docker_images"></center><ul><li><b>Run the Docker Image</b>: The Docker image is run in a container. This container is isolated from the host system and other containers, ensuring that the application runs consistently across different environments.</li></ul><pre><code class="bash"> docker run [OPTIONS] IMAGE [COMMAND] [ARG...]</code></pre><ul><li><b>Deploy the Docker Container</b>: Once the Docker container is running, it can be deployed to different machines and environments, making it easy to scale the application and ensure it runs consistently across all instances.</li></ul><h2 id="Benefits-of-Docker"><a href="#Benefits-of-Docker" class="headerlink" title="Benefits of Docker"></a>Benefits of Docker</h2><p>There are many benefits to using Docker for application development and deployment, including:</p><ul><li><p><b>Portability</b>: Docker containers are portable and can be run on any machine or environment that supports Docker, making it easier to deploy applications across different environments.</p></li><li><p><b>Isolation</b>: Containers provide a high level of isolation, helping to prevent conflicts between applications and dependencies.</p></li><li><p><b>Efficiency</b>: Docker containers are lightweight and use fewer resources than traditional virtual machines, making them more efficient and faster to deploy.</p></li><li><p><b>Scalability</b>: Docker makes it easy to scale applications by quickly deploying additional containers to handle increased demand.</p></li></ul><h2 id="Illustrations"><a href="#Illustrations" class="headerlink" title="Illustrations"></a>Illustrations</h2><p>Here are some illustrations to help visualize how Docker works:</p><center><img src="/2023/05/02/basic-docker/how_docker_work.png" class="" title="how_docker_work"></center><h2 id="Docker-Architecture"><a href="#Docker-Architecture" class="headerlink" title="Docker Architecture"></a>Docker Architecture</h2><p>This illustration shows the client-server architecture of Docker. The Docker client communicates with the Docker daemon to build, run, and manage containers. Docker images are used as templates to create containers, with each image containing a specific version of an application and all its dependencies.</p><center><img src="/2023/05/02/basic-docker/client_server_docker_architecture.png" class="" title="client_server_docker_architecture"></center><h2 id="Docker-Containerization"><a href="#Docker-Containerization" class="headerlink" title="Docker Containerization"></a>Docker Containerization</h2><p>This illustration shows how Docker uses containerization to create isolated environments for applications to run. Each container includes all the necessary dependencies and libraries needed to run the application, ensuring that it runs consistently across different machines and environments.</p><center><img src="/2023/05/02/basic-docker/docker_container.png" class="" title="docker_container"></center><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Docker is a powerful tool for application development and deployment. Its standardized approach to containerization, high level of isolation, portability, efficiency, and scalability make it an essential tool for modern software development. Whether you’re a developer looking to build and deploy applications or a system administrator looking to manage and scale applications, Docker can help simplify and streamline the process.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;center&gt;
+&lt;img src=&quot;/2023/05/02/basic-docker/docker_avatar.png&quot; class=&quot;&quot; title=&quot;docker_avatar&quot;&gt;
+&lt;/center&gt;
+
+&lt;br&gt;
+
+&lt;h2 id=&quot;What-is-Docker&quot;&gt;&lt;a h</summary>
+      
+    
+    
+    
+    <category term="Docker" scheme="https://dohungthinhsts.github.io/categories/Docker/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Yaml for Web Developers</title>
+    <link href="https://dohungthinhsts.github.io/2020/07/19/yaml/"/>
+    <id>https://dohungthinhsts.github.io/2020/07/19/yaml/</id>
+    <published>2020-07-19T05:00:00.000Z</published>
+    <updated>2023-05-01T06:23:06.242Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/2020/07/19/yaml/xml-vs-json-vs-yaml.png" class="" title="yaml"></center><p>As a Ruby On Rails developer, I bet you’ve seen a lot of .yml files in your project like database.yml(database configuration), en.yml(translate configuration), etc. But let’s face it, do you really know about .yml file???</p><p>All the things I know when I start a new rails project are .yml files serve for configuration but not know why using this extension and the benefit of it.</p><h1 id="What-is-YAML"><a href="#What-is-YAML" class="headerlink" title="What is YAML?"></a>What is YAML?</h1><p>Follow wikipedia, we have a definition:</p><blockquote><p>“YAML (a recursive acronym for “YAML Ain’t Markup Language”) is a human-readable data-serialization language” YAML (from version 1.2) is a superset of JSON and is commonly used for configuration files and in applications where data is being stored or transmitted.</p></blockquote><p>It means a lot, right? We use it for configuration and somehow YAML is so much more than JSON, especially about human-readable respective.</p><h1 id="YAML-vs-JSON"><a href="#YAML-vs-JSON" class="headerlink" title="YAML vs JSON"></a>YAML vs JSON</h1><p>Before dive into the different, we need to know the term superset first:</p><blockquote><p>“Superset is A programming language that contains all the features of a given language and has been expanded or enhanced to include other features as well.” - Font</p></blockquote><p>If you are an FE developer, you can see the relationship between YAML and JSON is similar to TypeScript and Javascript in JS world.<br>Let’s see this example:</p><pre><code class="json">&#123;  &quot;json&quot;: [    &quot;rigid&quot;,    &quot;better for data interchange&quot;  ],  &quot;yaml&quot;: [    &quot;slim and flexible&quot;,    &quot;better for configuration&quot;  ],  &quot;object&quot;: &#123;    &quot;array&quot;: [      &#123;        &quot;null_value&quot;: null      &#125;,      &#123;        &quot;boolean&quot;: true      &#125;,      &#123;        &quot;integer&quot;: 1      &#125;    ]  &#125;,  &quot;paragraph&quot;: &quot;Blank lines denote\nparagraph breaks\n&quot;,  &quot;content&quot;: &quot;Or we\ncan auto\nconvert line breaks\nto save space&quot;&#125;</code></pre><p>Here is an example JSON file, seems easy to read, but you can see some limitations:</p><ul><li>Can’t create variables.</li><li>Can’t use external variables.</li><li>Overrides values.</li></ul><p>And now, convert it to YAML syntax</p><pre><code class="json">json:  - rigid  - better for data interchangeyaml:  - slim and flexible  - better for configurationobject:  array:    - null_value:    - boolean: true    - integer: 1paragraph: &gt;   Blank lines denote   paragraph breakscontent: |-   Or we   can auto   convert line breaks   to save space</code></pre><p>Hmmm, the light is flickering :smiley:</p><h1 id="Concepts-Types-Syntax"><a href="#Concepts-Types-Syntax" class="headerlink" title="Concepts, Types, Syntax"></a>Concepts, Types, Syntax</h1><p>Let’s take a look in some concepts of YAML</p><p><b>INDENTATION</b><br><br><br>In Yaml, indentation does matter. It uses whitespace indentation to nest information. By whitespace, keep in mind tab is not allowed.</p><p><b>KEY&#x2F;VALUE</b><br><br><br>Like in JSON&#x2F;JS, YAML also uses the key&#x2F;value syntax and you can use in various ways:</p><pre><code class="php">key: valuekey_one: value onekey one: value # This works but it&#39;s weird&#39;my key&#39;: somekey</code></pre><p><b>COMMENTS</b><br><br><br>To write a comment in YAML, you just have to use # followed by your message content.</p><pre><code class="php"># I&#39;m a commentperson: # I&#39;m also a comment  age: 20</code></pre><p><b>LIST</b><br><br><br>There’re 2 ways to write lists:</p><ul><li>The old way(JSON way): array of strings.</li></ul><pre><code class="php">people: [&#39;Anne&#39;, &#39;John&#39;, &#39;Max&#39;]</code></pre><ul><li>The new way(Hyphen syntax from YAML).</li></ul><pre><code class="php">  people:    - Anne    - John    - Max</code></pre><p><b>STRINGS</b><br><br>We have several ways to write strings in yaml:</p><pre><code class="php">company: Google # Single words, no quotesfull_name: John Foo Bar Doe # Full sentence, no quotesname: &#39;John&#39; # Using single quotessurname: &quot;Christian Meyer&quot; # Using double quotes</code></pre><p>While in JSON we would have only one way to use double quotes:</p><pre><code class="json">&#123;  &quot;company&quot;: &quot;Google&quot;,  &quot;full_name&quot;: &quot;John Foo Bar Doe&quot;,  &quot;name&quot;: &quot;John&quot;,  &quot;surname&quot;: &quot;Christian Meyer&quot;&#125;</code></pre><p><b>NUMBERS</b><br><br><br>We have two types of number in YAML: Integer and Float</p><pre><code class="php">year: 2019 # IntegernodeVersion: 10.8 # Float</code></pre><p><b>NODE ANCHORS</b><br><br><br>I have no doubt if you are yawning with some information above, but please wake up because Node Anchors is an interesting feature.<br><br><br>An anchor is a mechanism to create a group of data (an object) that can be injected or extended from other objects.<br>If you’re a ruby on rails developer, I’m surely that you read that kind of feature in database.yml</p><pre><code class="php">  default: &amp;default    adapter: sqlite3    pool: &lt;%= ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) &#123; 5 &#125; %&gt;    timeout: 5000  development:    &lt;&lt;: *default    database: db/development.sqlite3  test:    &lt;&lt;: *default    database: db/test.sqlite3  production:    &lt;&lt;: *default    database: db/production.sqlite3</code></pre><p>But wait, take a deep eye, you may ask what the hell with:</p><pre><code class="php">  default: &amp;default    .    .    .  development:    &lt;&lt;: *default</code></pre><p>Yeah, that it is, here is an anchor. If you don’t use anchor, you have to repeat the same group configuration, equivalent:</p><pre><code class="php">  development:    adapter: sqlite3    pool: &lt;%= ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) &#123; 5 &#125; %&gt;    timeout: 5000    database: db/development.sqlite3  test:    adapter: sqlite3    pool: &lt;%= ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) &#123; 5 &#125; %&gt;    timeout: 5000    database: db/test.sqlite3  production:    adapter: sqlite3    pool: &lt;%= ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) &#123; 5 &#125; %&gt;    timeout: 5000    database: db/production.sqlite3</code></pre><p>So much copy&#x2F;paste here, instead of it, we create an anchor “<em>default</em>“, and inject it to another place in the YAML file.</p><pre><code class="php">  default: &amp;default    adapter: sqlite3    pool: &lt;%= ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) &#123; 5 &#125; %&gt;    timeout: 5000  development:    &lt;&lt;: *default    database: db/development.sqlite3</code></pre><p><b>JSON SYNTAX</b><br><br><br>Because YAML is a superset of JSON, it means we can write YAML by JSON way::</p><pre><code class="json">&#123;  &quot;details&quot;: &#123;    &quot;company&quot;: &#123;      &quot;name&quot;: &quot;Google&quot;,      &quot;year&quot;: 2019,      &quot;active&quot;: true    &#125;,    &quot;employees&quot;: [      &quot;Anne&quot;,      &quot;John&quot;,      &quot;Max&quot;    ]  &#125;&#125;</code></pre><p><b>SHELL&#x2F;BASH ENVIRONMENT</b><br><br><br>It’s very common .yml files are used as config files for many things, but especially for CI&#x2F;CD environment.<br>In CI&#x2F;CD environment, we usually use docker for setup&#x2F;installed environment, let’s check out a docker-compose.yml file:</p><pre><code class="php">version: &quot;3&quot;variables:  REDIS_IMAGE: redisservices:  node-app:    build: .    ports:      - &#39;4001:8081&#39;  redis-server:    image: $REDIS_IMAGE</code></pre><p>Note that the syntax to use variables by $ isn’t from YAML but shell&#x2F;bash.<br>What GitLab CI does is getting everything you’d defined in variables and creates shell variables.</p><h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>Every day we see a lot of “<em>yml</em>“ files but not so sure about the benefit and how it works, I hope you found some useful information in this article.</p><h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p><a href="https://yaml.org/">Yaml official website</a><br><a href="https://www.json2yaml.com/">Convert Json To Yaml</a><br><a href="https://en.wikipedia.org/wiki/YAML">Yaml Wikipedia</a><br><a href="https://dev.to/raulfdm/yaml-for-web-developers-559n">Yaml blog</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;center&gt;
+&lt;img src=&quot;/2020/07/19/yaml/xml-vs-json-vs-yaml.png&quot; class=&quot;&quot; title=&quot;yaml&quot;&gt;
+&lt;/center&gt;
+
+&lt;p&gt;As a Ruby On Rails developer, I bet you’ve</summary>
+      
+    
+    
+    
+    <category term="Yaml" scheme="https://dohungthinhsts.github.io/categories/Yaml/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ruby 2.7#tally</title>
+    <link href="https://dohungthinhsts.github.io/2020/05/05/tally/"/>
+    <id>https://dohungthinhsts.github.io/2020/05/05/tally/</id>
+    <published>2020-05-05T06:12:25.000Z</published>
+    <updated>2023-05-01T06:08:29.653Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/2020/05/05/tally/enumrable.png" class="" title="tally"></center><h1> Problems? </h1><p>If you’re ruby on rails developer, you might face resolving something like generating a hash from a list with different key and the values are the number that it appears in the list.There are likely several more variants of this, but those are a few of the more common ones you might see around.</p><p>For example:</p><pre><code class="ruby">list.group_by &#123; |v| v.something &#125;.transform_values(&amp;:size)list.group_by &#123; |v| v.something &#125;.map &#123; |k, vs| [k, vs.size] &#125;.to_hlist.group_by &#123; |v| v.something &#125;.to_h &#123; |k, vs| [k, vs.size] &#125;list.each_with_object(Hash.new(0)) &#123; |v, h| h[v.something] += 1 &#125;</code></pre><p>Any chances to make it short and more readable for developer?</p><p>Yes, we have it already since Ruby 2.7.</p><h1> Welcome to Enumerable#tally </h1><p>“<em>tally</em>“ counts things:</p><pre><code class="ruby">[1, 1, 2].tally# =&gt; &#123; 1 =&gt; 2, 2 =&gt; 1 &#125;[1, 1, 2].map(&amp;:even?).tally# =&gt; &#123; false =&gt; 2, true =&gt; 1 &#125;</code></pre><p>“<em>tally</em>“ works by counting the occurrences of each element in an Enumrable type. If we apply that to a list of string type, it might be clearer</p><pre><code class="ruby">%w(foo foo bar foo baz foo).tally=&gt; &#123;&quot;foo&quot; =&gt; 4, &quot;bar&quot; =&gt; 1, &quot;baz&quot; =&gt; 1&#125;</code></pre><p><em>tally_by</em> has not been accepted into core, but you can map the list first:</p><pre><code class="ruby">%w(foo foo bar foo baz foo).map &#123; |s| s[0] &#125;.tally=&gt; &#123;“f” =&gt; 4, “b” =&gt; 2&#125;</code></pre><h1> Wrapping Up </h1><p>Ruby 2.7 brings us so many interesting things. So keep track of it.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;center&gt;
+&lt;img src=&quot;/2020/05/05/tally/enumrable.png&quot; class=&quot;&quot; title=&quot;tally&quot;&gt;
+&lt;/center&gt;
+
+&lt;h1&gt; Problems? &lt;/h1&gt;
+
+&lt;p&gt;If you’re ruby on rails deve</summary>
+      
+    
+    
+    
+    <category term="Ruby" scheme="https://dohungthinhsts.github.io/categories/Ruby/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ethereum Series(DAPP)</title>
+    <link href="https://dohungthinhsts.github.io/2017/11/02/dapp/"/>
+    <id>https://dohungthinhsts.github.io/2017/11/02/dapp/</id>
+    <published>2017-11-02T06:12:25.000Z</published>
+    <updated>2023-05-01T05:59:13.799Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hầu hết các ứng dụng trên Internet hiện nay là Centralized. Có nghĩa rằng, các ứng dụng chạy ở dưới người dùng sẽ là client kết nối với một trung tâm server, nơi chịu trách nhiệm, cam kết về service đối với người dùng. Nếu bạn để ý sẽ thấy rằng các websites, hay games đều thuộc sở hữu của một công  ty hoặc một cá nhân cụ thể. Các nhà phát triển phần mềm đã xây dựng các ứng dụng Centralized trong một khoảng thời gian dài. Tuy nhiên, có một vài đặc điểm của ứng dụng mà các hệ thống Centralized không thể đáp ứng được, hoặc nếu có đáp ứng được thì vẫn dẫn đến một vài vấn đề nghiêm trọng. Các vấn đề đó bao gồm: tính minh bạch, tính chịu lỗi, không ngăn chặn được quá trình kiểm duyệt của đơn vị chức năng… Để giải quyết những vấn đề này, một công nghệ mới dành cho việc xây dựng ứng dụng Internet được gọi là decentralized applications (Dapps) ra đời.<br>Trong bài viết này, chúng ta sẽ tìm hiểu về Decentralized Apps.</p><p>Các topics trong bài viết này bao gồm:</p><ul><li>DApps là gì?</li><li>Sự khác nhau giữa decentralized, centralized, và distributed applications?</li><li>Ưu, nhược điểm của centralized và decentralized applications.</li><li>Giới thiệu về một số DApps nổi tiếng hiện nay.</li></ul><p><strong>1. Dapp là gì?</strong></p><p>Một Dapp về cơ bản là một ứng dụng Internet nơi mà backend được chạy trên một mạng lưới peer-to-peer và source code của nó phải là open source. Với cơ chế như vậy, không có một node nào trên mạng lưới có khả năng điều khiển hoàn toàn Dapp.</p><p>Phụ thuộc vào các chức năng của Dapp mà nó sẽ có các kiểu data structures khác nhau nhằm mục đích lưu trữ dữ liệu. Ví dụ, bitcoin DApp sử dụng blockchain data structure.</p><p>Peer ở đây có thể là bất kỳ máy tính nào có kết nối đến Internet, điều này gây khó khăn lớn để có thể phát hiện hay ngăn chặn một peer nào đó cố gắng để tạo ra sự sai lệch thông tin và broadcast cho tất cả các peers còn lại. Với thách thức trên, đã có một vài các protocol(consensus protocol) với ý nghĩa sẽ xem xét tính đúng đắn của dữ liệu được publish ra từ một node là đúng hay sai. Đây là vấn đề riêng của hệ thống Decentralized vì các hệ thống như Centralized được quản lí bởi một server có khả năng phán xét tính đúng đắn của thông tin được publish từ một client.<br>Consensus protocol được thiết kế dành riêng cho một loại data structure mà DApp sử dụng. Ví dụ, bitcoin sử dụng proof-of-work protocol để có thể đảm bảo tính thống nhất trong Dapp.</p><p>Mọi DApp đều cần một client để user sử dụng. Trước tiên trong quá trình sử dụng, chúng ta cần một node ở trên mạng và node này sẽ trở thành node server kết nối với client. Những node của DApp bây giờ sẽ cung cấp các API và thúc đẩy các nhà developers phát triển đa dạng các client sử dụng API này.  Một vài developer sẽ công khai cung cấp client, các client này nên là open source và nên được download để sử dụng, nếu ngược lại, toàn bộ ý tưởng của decentralization sẽ bị sai lệch.</p><center><img src="/2017/11/02/dapp/centralized_decentralized_distributed.jpeg" class="" title="centralized_decentralized_distribution"></center><center>So sánh trực quan các hệ thống hiện tại.</center><p><strong>2. Ưu điểm của ứng dụng decentralized</strong></p><ul><li>DApp rất mạnh về khả năng chịu lỗi, vì không hề có một điểm chịu lỗi duy nhất nào. Bất cứ node nào trên mạng lưới bị lỗi sẽ ko gây ảnh hưởng đến toàn bộ hệ thống.</li><li>DApp ngăn chặn sự kiểm duyệt bất hợp lệ(censorship) vì không có một trung tâm nào đứng ra chịu trách nhiệm Dapp.  Vì thế chính phủ sẽ không có khả năng gây áp lực để kiểm duyệt thông tin. Chính phủ cũng không thể ngăn chặn domain hay IP của ứng dụng vì DApp hoàn toàn không truy cập thông qua một domain hay một IP nào cụ thể. Tất nhiên là bạn có thể nghĩ rằng chính phủ có khả năng theo vết(track) của một node nào đó và chặn IP của chính node này, tuy nhiên, với một mạng peer-to-peer đủ lớn, thực sự rất khó khăn để có thể tắt ứng dụng Dapp, đặc biết là khi mạng lưới này trải rộng trên nhiều quốc gia.</li><li>Đáng tin cậy. User sẽ hoàn toàn tin cậy vào Dapp vì nó không bị điều khiển bởi một trung tâm hay đơn vị nào cả.</li></ul><p><strong>3. Nhược điểm của ứng dụng decentralized</strong></p><p>Dĩ nhiên là mọi hệ thống đều có ưu điểm và nhược điểm, dưới đây là một số nhược điểm:</p><ul><li>Việc fix bug hay update DApp là điều khó khăn, vì mọi node trên mạng đều phải được update.</li><li>Vì một số DApp yêu cầu xác nhận danh tính(authorize) và vì DApp không hề có một trung tâm chịu trách nhiệm quản lí để xác mình danh tính người dùng, điều này trở thành vấn đề lớn trong quá trình phát triển Dapp.</li><li>DApp rất khó xây dựng, vì nó sử dụng nhiều protocol phức tạp để đạt được tính thống nhất(consensus) như đã nói qua ở trên. Không giống như các ứng dụng centralized bắt đầu với ý tưởng(idea), rồi thêm các features rồi sau đó thì scale ứng dụng, DApp phải scale hệ thống ngay khi họ vừa bắt đầu.</li><li>Một ứng dụng thường sẽ có những phụ thuộc nhất định vào thirt-party API để lấy hoặc lưu trữ thông tin. Tuy nhiên, DApp không nên phụ thuộc vào centralized application APIs, nó nên phụ thuộc vào các DApp khác. Mặc dù vậy, các DApp trên thế giới hiện nay chưa thực sự phổ biến, cộng với việc DApp trong thực tế vẫn khá khó khăn để tương tác với các Dapp khác.</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Hầu hết các ứng dụng trên Internet hiện nay là Centralized. Có nghĩa rằng, các ứng dụng chạy ở dưới người dùng sẽ là client kết nối với m</summary>
+      
+    
+    
+    
+    <category term="BlockChain" scheme="https://dohungthinhsts.github.io/categories/BlockChain/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ethereum Series(Introduction)</title>
+    <link href="https://dohungthinhsts.github.io/2017/11/02/ethereum/"/>
+    <id>https://dohungthinhsts.github.io/2017/11/02/ethereum/</id>
+    <published>2017-11-02T06:11:25.000Z</published>
+    <updated>2023-05-01T05:59:54.390Z</updated>
+    
+    <content type="html"><![CDATA[<p>Xin chào các bạn, đây là bài blog đầu tiên của mình trong series Ethereum, các kiến thức mà mình nêu ra trong series này sẽ tập trung vào cuốn sách Building BlockChain Projects của tác giả Narayan Prusty. Cuốn sách này đang được bán trên Amazon với giá $7.99.</p><center><img src="/2017/11/02/ethereum/building_blockchain_project.png" class="" title="building_blockchain_project"></center><center>Building BlockChain Projects</center><p>Giới thiệu sơ qua về cuốn Building BlockChain Projects:<br>Cuốn sách trình bày về các khái niệm cơ bản của Ethereum(include BlockChain) theo lối dẫn dắt dễ hiểu và tự nhiên, nội dung bao gồm các khái niệm về DAPP, How Ethereum Works, Writing Smart Contract, Getting Started With Web3js, Building Wallet Service, so on…</p><p>Thông qua các kiến thức của cuốn sách này và mức độ tìm hiểu của bản thân, mong rằng mình có thể giúp các bạn có thể tiếp cận với Ethereum 1 cách dễ dàng hơn, thích thú hơn.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Xin chào các bạn, đây là bài blog đầu tiên của mình trong series Ethereum, các kiến thức mà mình nêu ra trong series này sẽ tập trung vào</summary>
+      
+    
+    
+    
+    <category term="BlockChain" scheme="https://dohungthinhsts.github.io/categories/BlockChain/"/>
+    
+    
+  </entry>
+  
+</feed>
