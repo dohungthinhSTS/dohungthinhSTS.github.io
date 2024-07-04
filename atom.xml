@@ -6,7 +6,7 @@
   <link href="https://dohungthinhsts.github.io/atom.xml" rel="self"/>
   
   <link href="https://dohungthinhsts.github.io/"/>
-  <updated>2024-07-04T11:06:31.540Z</updated>
+  <updated>2024-07-04T11:36:19.172Z</updated>
   <id>https://dohungthinhsts.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The Open/Closed Principle in Rails - Extend Without Breaking a Sweat</title>
+    <link href="https://dohungthinhsts.github.io/2024/01/07/ocp_in_rails_detailed/"/>
+    <id>https://dohungthinhsts.github.io/2024/01/07/ocp_in_rails_detailed/</id>
+    <published>2024-01-07T05:00:00.000Z</published>
+    <updated>2024-07-04T11:36:19.172Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/2024/01/07/ocp_in_rails_detailed/open_closed_principle.png" class="" title="open_closed_principle"></center><br><h2 id="The-Open-x2F-Closed-Principle-in-Rails-Extend-Without-Breaking-a-Sweat"><a href="#The-Open-x2F-Closed-Principle-in-Rails-Extend-Without-Breaking-a-Sweat" class="headerlink" title="The Open&#x2F;Closed Principle in Rails: Extend Without Breaking a Sweat."></a>The Open&#x2F;Closed Principle in Rails: Extend Without Breaking a Sweat.</h2><p> Hey Rails devs! Today we’re diving into the Open&#x2F;Closed Principle (OCP), which is all about making your code open for extension but closed for modification. Think of it as adding new features to your app without smashing the existing ones, like upgrading your kitchen appliances without remodeling the whole kitchen.</p><h3 id="What-is-the-Open-x2F-Closed-Principle"><a href="#What-is-the-Open-x2F-Closed-Principle" class="headerlink" title="What is the Open&#x2F;Closed Principle?"></a>What is the Open&#x2F;Closed Principle?</h3><p>The Open&#x2F;Closed Principle states that software entities (classes, modules, functions, etc.) should be open for extension but closed for modification. This means you should be able to add new functionality without changing existing code.</p><h3 id="Why-is-OCP-Important"><a href="#Why-is-OCP-Important" class="headerlink" title="Why is OCP Important?"></a>Why is OCP Important?</h3><p>Following OCP helps make your code more flexible and easier to maintain. It’s like having a modular kitchen where you can add new appliances without tearing down the walls. Your code stays neat, organized, and ready for new features.</p><h3 id="OCP-in-Models"><a href="#OCP-in-Models" class="headerlink" title="OCP in Models"></a>OCP in Models</h3><p>Let’s start with models. Imagine you have a <code>Payment</code> model that processes different types of payments. Instead of cramming all the logic into one class, you can use OCP to make it more flexible.</p><h4 id="Example-Payment-Processing"><a href="#Example-Payment-Processing" class="headerlink" title="Example: Payment Processing"></a>Example: Payment Processing</h4><p><strong>Before:</strong></p><pre><code class="ruby">class Payment  def process(type)    if type == &#39;credit_card&#39;      # Process credit card payment    elsif type == &#39;paypal&#39;      # Process PayPal payment    end  endend</code></pre><p><strong>After:</strong></p><pre><code class="ruby">class Payment  def process(payment_method)    payment_method.process  endendclass CreditCardPayment  def process    # Process credit card payment  endendclass PayPalPayment  def process    # Process PayPal payment  endendclass BitcoinPayment  def process    # Process Bitcoin payment  endend</code></pre><p>With this setup, you can add new payment methods without touching the <code>Payment</code> class. It’s like upgrading your kitchen appliances without breaking your countertops.</p><h3 id="OCP-in-Controllers"><a href="#OCP-in-Controllers" class="headerlink" title="OCP in Controllers"></a>OCP in Controllers</h3><p>Controllers often become bloated with various responsibilities. OCP helps keep them clean and focused by allowing you to extend their functionality without modifying them.</p><h4 id="Example-Order-Processing"><a href="#Example-Order-Processing" class="headerlink" title="Example: Order Processing"></a>Example: Order Processing</h4><p><strong>Before:</strong></p><pre><code class="ruby">class OrdersController &lt; ApplicationController  def create    @order = Order.new(order_params)    if @order.save      if @order.payment_type == &#39;credit_card&#39;        # Process credit card payment      elsif @order.payment_type == &#39;paypal&#39;        # Process PayPal payment      end      render json: &#123; message: &#39;Order created successfully&#39; &#125;, status: :created    else      render json: &#123; errors: @order.errors &#125;, status: :unprocessable_entity    end  endend</code></pre><p><strong>After:</strong></p><pre><code class="ruby">class OrdersController &lt; ApplicationController  def create    @order = Order.new(order_params)    if @order.save      payment_processor = PaymentProcessor.new(@order)      payment_processor.process      render json: &#123; message: &#39;Order created successfully&#39; &#125;, status: :created    else      render json: &#123; errors: @order.errors &#125;, status: :unprocessable_entity    end  endend</code></pre><pre><code class="ruby">class PaymentProcessor  def initialize(order)    @order = order  end  def process    case @order.payment_type    when &#39;credit_card&#39;      CreditCardPayment.new.process    when &#39;paypal&#39;      PayPalPayment.new.process    end  endend</code></pre><h3 id="OCP-in-Views"><a href="#OCP-in-Views" class="headerlink" title="OCP in Views"></a>OCP in Views</h3><p>Views should also adhere to the Open&#x2F;Closed Principle to ensure they can be easily extended without modifying the existing code.</p><h4 id="Example-Displaying-Different-Types-of-Notifications"><a href="#Example-Displaying-Different-Types-of-Notifications" class="headerlink" title="Example: Displaying Different Types of Notifications"></a>Example: Displaying Different Types of Notifications</h4><p><strong>Before:</strong></p><pre><code class="erb">&lt;% if notification.type == &#39;success&#39; %&gt;  &lt;div class=&quot;alert alert-success&quot;&gt;&lt;%= notification.message %&gt;&lt;/div&gt;&lt;% elsif notification.type == &#39;error&#39; %&gt;  &lt;div class=&quot;alert alert-danger&quot;&gt;&lt;%= notification.message %&gt;&lt;/div&gt;&lt;% end %&gt;</code></pre><p><strong>After:</strong></p><pre><code class="erb">&lt;%= render &quot;notifications/#&#123;notification.type&#125;&quot;, notification: notification %&gt;</code></pre><pre><code class="erb">&lt;!-- _success.html.erb --&gt;&lt;div class=&quot;alert alert-success&quot;&gt;&lt;%= notification.message %&gt;&lt;/div&gt;&lt;!-- _error.html.erb --&gt;&lt;div class=&quot;alert alert-danger&quot;&gt;&lt;%= notification.message %&gt;&lt;/div&gt;</code></pre><p>With this approach, you can add new notification types without changing the main view file. It’s like adding new decorations to your room without repainting the walls.</p><h3 id="OCP-in-Services"><a href="#OCP-in-Services" class="headerlink" title="OCP in Services"></a>OCP in Services</h3><p>Services can benefit greatly from the Open&#x2F;Closed Principle by allowing new functionalities to be added easily.</p><h4 id="Example-Notification-Service"><a href="#Example-Notification-Service" class="headerlink" title="Example: Notification Service"></a>Example: Notification Service</h4><p><strong>Before:</strong></p><pre><code class="ruby">class NotificationService  def send(notification_type, message)    if notification_type == &#39;email&#39;      # Send email notification    elsif notification_type == &#39;sms&#39;      # Send SMS notification    end  endend</code></pre><p><strong>After:</strong></p><pre><code class="ruby">class NotificationService  def send(notification)    notification.send  endendclass EmailNotification  def send    # Send email notification  endendclass SmsNotification  def send    # Send SMS notification  endendclass PushNotification  def send    # Send push notification  endend</code></pre><p>Now you can add new notification types without modifying the <code>NotificationService</code> class. It’s like adding new tools to your toolbox without rearranging everything.</p><h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>The Open&#x2F;Closed Principle is about keeping your code open for new functionality while being closed to modifications. By applying OCP, you can add new features without worrying about breaking existing code. It’s like adding new tools to your toolbox without having to reorganize everything.</p><p>Stay tuned for more tips on writing clean, efficient, and fun Ruby on Rails code.</p><p>Happy coding!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;center&gt;
+&lt;img src=&quot;/2024/01/07/ocp_in_rails_detailed/open_closed_principle.png&quot; class=&quot;&quot; title=&quot;open_closed_principle&quot;&gt;
+&lt;/center&gt;
+
+&lt;br&gt;
+
+&lt;h2</summary>
+      
+    
+    
+    
+    <category term="Ruby" scheme="https://dohungthinhsts.github.io/categories/Ruby/"/>
+    
+    
+    <category term="Ruby" scheme="https://dohungthinhsts.github.io/tags/Ruby/"/>
+    
+    <category term="Software Development" scheme="https://dohungthinhsts.github.io/tags/Software-Development/"/>
+    
+    <category term="Rails" scheme="https://dohungthinhsts.github.io/tags/Rails/"/>
+    
+    <category term="SOLID" scheme="https://dohungthinhsts.github.io/tags/SOLID/"/>
+    
+  </entry>
   
   <entry>
     <title>The Single Responsibility Principle in Rails</title>
