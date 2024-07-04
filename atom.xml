@@ -6,7 +6,7 @@
   <link href="https://dohungthinhsts.github.io/atom.xml" rel="self"/>
   
   <link href="https://dohungthinhsts.github.io/"/>
-  <updated>2024-07-04T10:56:46.566Z</updated>
+  <updated>2024-07-04T11:06:31.540Z</updated>
   <id>https://dohungthinhsts.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The Single Responsibility Principle in Rails</title>
+    <link href="https://dohungthinhsts.github.io/2024/01/06/srp_in_rails/"/>
+    <id>https://dohungthinhsts.github.io/2024/01/06/srp_in_rails/</id>
+    <published>2024-01-06T05:00:00.000Z</published>
+    <updated>2024-07-04T11:06:31.540Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/2024/01/06/srp_in_rails/single_responsibility.png" class="" title="single_responsibility"></center><br><h2 id="The-Single-Responsibility-Principle-in-Rails"><a href="#The-Single-Responsibility-Principle-in-Rails" class="headerlink" title="The Single Responsibility Principle in Rails."></a>The Single Responsibility Principle in Rails.</h2><p> Welcome, Rails developers! Today, we’re diving into the world of the Single Responsibility Principle (SRP), the first letter in the SOLID acronym. Get ready for an engaging journey filled with humor, insights, and practical examples for each layer of your Rails application.</p><h3 id="What-is-the-Single-Responsibility-Principle-SRP"><a href="#What-is-the-Single-Responsibility-Principle-SRP" class="headerlink" title="What is the Single Responsibility Principle (SRP)?"></a>What is the Single Responsibility Principle (SRP)?</h3><p>The Single Responsibility Principle states that a class should have one, and only one, reason to change. This means that a class should only have one job or responsibility. Think of it as giving your class a clear job title. No one likes a job description that says, “Do everything.”</p><h3 id="Why-is-SRP-Important"><a href="#Why-is-SRP-Important" class="headerlink" title="Why is SRP Important?"></a>Why is SRP Important?</h3><p>Following SRP helps make your codebase more modular, easier to maintain, and less prone to bugs. It’s like having a well-organized kitchen where each utensil has a specific purpose. You wouldn’t use a spatula to cut vegetables, would you?</p><h3 id="SRP-in-Models"><a href="#SRP-in-Models" class="headerlink" title="SRP in Models"></a>SRP in Models</h3><p>Let’s start with models, the backbone of your Rails application. A model should handle database interactions and nothing more. But sometimes, models get burdened with extra responsibilities like validation, callbacks, or even business logic.</p><h4 id="Example-User-Model-with-Too-Many-Responsibilities"><a href="#Example-User-Model-with-Too-Many-Responsibilities" class="headerlink" title="Example: User Model with Too Many Responsibilities"></a>Example: User Model with Too Many Responsibilities</h4><p><strong>Before:</strong></p><pre><code class="ruby">class User &lt; ApplicationRecord  def send_welcome_email    # Code to send welcome email  end  def calculate_age    # Code to calculate user&#39;s age  endend</code></pre><p><strong>After:</strong></p><pre><code class="ruby">class User &lt; ApplicationRecordendclass UserNotifier  def initialize(user)    @user = user  end  def send_welcome_email    # Code to send welcome email  endendclass UserAgeCalculator  def initialize(user)    @user = user  end  def calculate_age    # Code to calculate user&#39;s age  endend</code></pre><p>Now, our <code>User</code> model can focus on database interactions, while <code>UserNotifier</code> and <code>UserAgeCalculator</code> handle their respective tasks. It’s like having a chef, a waiter, and a dishwasher each doing their own job.</p><h3 id="SRP-in-Controllers"><a href="#SRP-in-Controllers" class="headerlink" title="SRP in Controllers"></a>SRP in Controllers</h3><p>Controllers should handle HTTP requests and responses. However, they often get bogged down with business logic or data manipulation.</p><h4 id="Example-UserController-with-Too-Many-Responsibilities"><a href="#Example-UserController-with-Too-Many-Responsibilities" class="headerlink" title="Example: UserController with Too Many Responsibilities"></a>Example: UserController with Too Many Responsibilities</h4><p><strong>Before:</strong></p><pre><code class="ruby">class UsersController &lt; ApplicationController  def create    @user = User.new(user_params)    if @user.save      send_welcome_email(@user)      render json: &#123; message: &#39;User created successfully&#39; &#125;, status: :created    else      render json: &#123; errors: @user.errors &#125;, status: :unprocessable_entity    end  end  private  def send_welcome_email(user)    # Code to send welcome email  endend</code></pre><p><strong>After:</strong></p><pre><code class="ruby">class UsersController &lt; ApplicationController  def create    @user = User.new(user_params)    if @user.save      UserNotifier.new(@user).send_welcome_email      render json: &#123; message: &#39;User created successfully&#39; &#125;, status: :created    else      render json: &#123; errors: @user.errors &#125;, status: :unprocessable_entity    end  endend</code></pre><p>By moving the email sending logic to <code>UserNotifier</code>, our controller is now leaner and cleaner. It’s like having a sous-chef to handle the prep work so the head chef can focus on cooking.</p><h3 id="SRP-in-Views"><a href="#SRP-in-Views" class="headerlink" title="SRP in Views"></a>SRP in Views</h3><p>Views should display data and nothing more. Sometimes, we sneak in logic that doesn’t belong there.</p><h4 id="Example-View-with-Business-Logic"><a href="#Example-View-with-Business-Logic" class="headerlink" title="Example: View with Business Logic"></a>Example: View with Business Logic</h4><p><strong>Before:</strong></p><pre><code class="erb">&lt;% @users.each do |user| %&gt;  &lt;p&gt;    Name: &lt;%= user.name %&gt;&lt;br&gt;    Age: &lt;%= user.age %&gt;    &lt;% if user.age &gt;= 18 %&gt;      &lt;span&gt;(Adult)&lt;/span&gt;    &lt;% else %&gt;      &lt;span&gt;(Minor)&lt;/span&gt;    &lt;% end %&gt;  &lt;/p&gt;&lt;% end %&gt;</code></pre><p><strong>After:</strong></p><pre><code class="erb">&lt;% @users.each do |user| %&gt;  &lt;p&gt;    Name: &lt;%= user.name %&gt;&lt;br&gt;    Age: &lt;%= user.age %&gt;    &lt;%= display_age_group(user) %&gt;  &lt;/p&gt;&lt;% end %&gt;</code></pre><pre><code class="ruby">module UsersHelper  def display_age_group(user)    user.age &gt;= 18 ? &#39;&lt;span&gt;(Adult)&lt;/span&gt;&#39;.html_safe : &#39;&lt;span&gt;(Minor)&lt;/span&gt;&#39;.html_safe  endend</code></pre><p>Moving the age group logic to a helper makes the view simpler and easier to maintain. It’s like putting the finishing touches on a dish without worrying about the recipe.</p><h3 id="SRP-in-Services"><a href="#SRP-in-Services" class="headerlink" title="SRP in Services"></a>SRP in Services</h3><p>Service objects are perfect for encapsulating complex business logic. They can be your secret weapon for keeping your models and controllers slim.</p><h4 id="Example-Payment-Processing-Service"><a href="#Example-Payment-Processing-Service" class="headerlink" title="Example: Payment Processing Service"></a>Example: Payment Processing Service</h4><p><strong>Before:</strong></p><pre><code class="ruby">class OrdersController &lt; ApplicationController  def create    @order = Order.new(order_params)    if @order.save      process_payment(@order)      render json: &#123; message: &#39;Order created successfully&#39; &#125;, status: :created    else      render json: &#123; errors: @order.errors &#125;, status: :unprocessable_entity    end  end  private  def process_payment(order)    # Code to process payment  endend</code></pre><p><strong>After:</strong></p><pre><code class="ruby">class OrdersController &lt; ApplicationController  def create    @order = Order.new(order_params)    if @order.save      PaymentProcessor.new(@order).process      render json: &#123; message: &#39;Order created successfully&#39; &#125;, status: :created    else      render json: &#123; errors: @order.errors &#125;, status: :unprocessable_entity    end  endend</code></pre><pre><code class="ruby">class PaymentProcessor  def initialize(order)    @order = order  end  def process    # Code to process payment  endend</code></pre><p>By moving the payment processing logic to a service object, our controller remains focused on handling HTTP requests. It’s like having a dedicated cashier while the sales staff handles customer service.</p><h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>The Single Responsibility Principle is all about giving each class a clear and focused job. By applying SRP to models, controllers, views, and services, you can keep your Rails application organized and maintainable. Remember, a well-organized kitchen makes for a happy chef!</p><p>Stay tuned for more tips on writing clean, efficient, and enjoyable Ruby on Rails code.</p><p>Happy coding!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;center&gt;
+&lt;img src=&quot;/2024/01/06/srp_in_rails/single_responsibility.png&quot; class=&quot;&quot; title=&quot;single_responsibility&quot;&gt;
+&lt;/center&gt;
+
+&lt;br&gt;
+
+&lt;h2 id=&quot;The-</summary>
+      
+    
+    
+    
+    <category term="Ruby" scheme="https://dohungthinhsts.github.io/categories/Ruby/"/>
+    
+    
+    <category term="Ruby" scheme="https://dohungthinhsts.github.io/tags/Ruby/"/>
+    
+    <category term="Software Development" scheme="https://dohungthinhsts.github.io/tags/Software-Development/"/>
+    
+    <category term="Rails" scheme="https://dohungthinhsts.github.io/tags/Rails/"/>
+    
+    <category term="SOLID" scheme="https://dohungthinhsts.github.io/tags/SOLID/"/>
+    
+  </entry>
   
   <entry>
     <title>SOLID Principles in Ruby on Rails - Part 2</title>
