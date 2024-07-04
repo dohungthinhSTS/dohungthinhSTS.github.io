@@ -6,7 +6,7 @@
   <link href="https://dohungthinhsts.github.io/atom.xml" rel="self"/>
   
   <link href="https://dohungthinhsts.github.io/"/>
-  <updated>2023-05-10T03:40:56.807Z</updated>
+  <updated>2024-07-04T09:28:29.013Z</updated>
   <id>https://dohungthinhsts.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Understanding Docker-Compose Configuration</title>
+    <link href="https://dohungthinhsts.github.io/2024/07/04/docker-compose/"/>
+    <id>https://dohungthinhsts.github.io/2024/07/04/docker-compose/</id>
+    <published>2024-07-04T05:00:00.000Z</published>
+    <updated>2024-07-04T09:28:29.013Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/2024/07/04/docker-compose/docker_compose_avatar.png" class="" title="docker_compose_avatar"></center><br><h2 id="What-is-Docker-Compose"><a href="#What-is-Docker-Compose" class="headerlink" title="What is Docker-Compose?"></a>What is Docker-Compose?</h2><p>Docker-Compose is a tool that simplifies the orchestration of multi-container Docker applications. It allows you to define your application stack in a <code>docker-compose.yml</code> file, specifying the services, networks, and volumes needed. With a single command, you can start, stop, and manage your entire application.</p><h2 id="Key-Benefits-of-Docker-Compose"><a href="#Key-Benefits-of-Docker-Compose" class="headerlink" title="Key Benefits of Docker-Compose"></a>Key Benefits of Docker-Compose</h2><ul><li><strong>Simplifies multi-container setups</strong>: Manage complex applications with multiple services effortlessly.</li><li><strong>Reproducible environments</strong>: Ensure consistent setups across different environments (development, testing, production).</li><li><strong>Easy orchestration</strong>: Streamline operations with commands to start, stop, and rebuild services.</li></ul><h2 id="Basic-Structure-of-a-docker-compose-yml-File"><a href="#Basic-Structure-of-a-docker-compose-yml-File" class="headerlink" title="Basic Structure of a docker-compose.yml File"></a>Basic Structure of a docker-compose.yml File</h2><p>A <code>docker-compose.yml</code> file consists of several key sections: <code>version</code>, <code>services</code>, <code>networks</code>, and <code>volumes</code>. Here’s a breakdown of each component:</p><h3 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h3><p>The <code>version</code> key specifies the Compose file format. It ensures compatibility with different Docker-Compose versions.</p><pre><code class="yaml">version: &#39;3.8&#39;</code></pre><h3 id="Services"><a href="#Services" class="headerlink" title="Services"></a>Services</h3><p>The <code>services</code> section defines the individual containers that make up your application. Each service is a container, and you can specify its image, build context, ports, environment variables, and dependencies.</p><p><strong>Example</strong>:</p><pre><code class="yaml">services:  web:    image: nginx:latest    ports:      - &quot;80:80&quot;  database:    image: postgres:latest    environment:      POSTGRES_USER: example      POSTGRES_PASSWORD: example</code></pre><h2 id="Networks"><a href="#Networks" class="headerlink" title="Networks"></a>Networks</h2><p>The <code>networks</code> section defines the custom networks for your containers. By default, docker-Compose creates a network for your services, but you can also specify custom networks for advanced configurations.</p><p><strong>Example</strong>:</p><pre><code class="yaml">networks:  frontend:  backend:</code></pre><h2 id="Volumes"><a href="#Volumes" class="headerlink" title="Volumes"></a>Volumes</h2><p>The <code>volumes</code> section defines named volumes that persist data across container restarts. Volumes are essential for storing database data, user uploads, and other persistent information.</p><p><strong>Example</strong>:</p><pre><code class="yaml">volumes:  db-data:</code></pre><h3 id="Advanced-Docker-Compose-Configuration"><a href="#Advanced-Docker-Compose-Configuration" class="headerlink" title="Advanced Docker-Compose Configuration"></a>Advanced Docker-Compose Configuration</h3><p>Beyond the basics, Docker-Compose supports advanced configurations to fine-tune your applications.</p><h2 id="Service-Dependencies"><a href="#Service-Dependencies" class="headerlink" title="Service Dependencies"></a>Service Dependencies</h2><p>Use the <code>depends_on</code> key to specify service dependencies, ensuring that services start in a particular order.</p><p><strong>Example</strong>:</p><pre><code class="yaml">services:  web:    depends_on:      - database</code></pre><h2 id="Health-Checks"><a href="#Health-Checks" class="headerlink" title="Health Checks"></a>Health Checks</h2><p>Define health checks to monitor the status of your services, ensuring they are running correctly.</p><p><strong>Example</strong>:</p><pre><code class="yaml">services:  web:    healthcheck:      test: [&quot;CMD&quot;, &quot;curl&quot;, &quot;-f&quot;, &quot;http://localhost&quot;]      interval: 30s      timeout: 10s      retries: 3</code></pre><h2 id="Secrets-and-Configs"><a href="#Secrets-and-Configs" class="headerlink" title="Secrets and Configs"></a>Secrets and Configs</h2><p>Manage sensitive data and configuration files securely with the secrets and configs keys.</p><p><strong>Example</strong>:</p><pre><code class="yaml">services:  web:    secrets:      - db_passwordsecrets:  db_password:    file: ./db_password.txt</code></pre><h3 id="Common-Commands"><a href="#Common-Commands" class="headerlink" title="Common Commands"></a>Common Commands</h3><h2 id="Starting-Services"><a href="#Starting-Services" class="headerlink" title="Starting Services"></a>Starting Services</h2><p>To start your defined services, use the up command:</p><pre><code class="sh">docker-compose up -d</code></pre><h2 id="Stopping-Services"><a href="#Stopping-Services" class="headerlink" title="Stopping Services"></a>Stopping Services</h2><p>To stop your services, use the down command:</p><pre><code class="sh">docker-compose down</code></pre><h2 id="Viewing-Logs"><a href="#Viewing-Logs" class="headerlink" title="Viewing Logs"></a>Viewing Logs</h2><p>To view logs from your services, use the logs command:</p><pre><code class="sh">docker-compose logs -f</code></pre><h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>Docker-Compose is an invaluable tool for managing multi-container Docker applications. By understanding its configuration and leveraging its features, you can streamline your development workflow and ensure consistent environments across different stages of your project. Start by defining your services, networks, and volumes, and explore advanced configurations to optimize your application’s performance and security.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;center&gt;
+&lt;img src=&quot;/2024/07/04/docker-compose/docker_compose_avatar.png&quot; class=&quot;&quot; title=&quot;docker_compose_avatar&quot;&gt;
+&lt;/center&gt;
+
+&lt;br&gt;
+
+&lt;h2 id=&quot;Wh</summary>
+      
+    
+    
+    
+    <category term="Docker" scheme="https://dohungthinhsts.github.io/categories/Docker/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Create Rails Project By Docker</title>
