@@ -6,7 +6,7 @@
   <link href="https://dohungthinhsts.github.io/atom.xml" rel="self"/>
   
   <link href="https://dohungthinhsts.github.io/"/>
-  <updated>2024-07-04T10:36:23.405Z</updated>
+  <updated>2024-07-04T10:45:14.749Z</updated>
   <id>https://dohungthinhsts.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Understanding SOLID Principles in Ruby on Rails</title>
+    <link href="https://dohungthinhsts.github.io/2024/01/04/solid_principles_in_rails/"/>
+    <id>https://dohungthinhsts.github.io/2024/01/04/solid_principles_in_rails/</id>
+    <published>2024-01-04T05:00:00.000Z</published>
+    <updated>2024-07-04T10:45:14.749Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/2024/01/04/solid_principles_in_rails/solid_principles.png" class="" title="solid_principles"></center><br><h2 id="Understanding-SOLID-Principles-in-Ruby-on-Rails"><a href="#Understanding-SOLID-Principles-in-Ruby-on-Rails" class="headerlink" title="Understanding SOLID Principles in Ruby on Rails."></a>Understanding SOLID Principles in Ruby on Rails.</h2><p> SOLID principles are a set of design guidelines that help developers create more maintainable, understandable, and flexible software. These principles are especially valuable in Ruby on Rails projects, where code can quickly become complex. In this blog post, we’ll explore each of the SOLID principles and provide examples of how you can apply them in your Rails applications.</p><h3 id="S-Single-Responsibility-Principle-SRP"><a href="#S-Single-Responsibility-Principle-SRP" class="headerlink" title="S - Single Responsibility Principle (SRP)"></a>S - Single Responsibility Principle (SRP)</h3><p>The Single Responsibility Principle states that a class should have only one reason to change. This means that a class should only have one job or responsibility.</p><h4 id="Example-in-Rails"><a href="#Example-in-Rails" class="headerlink" title="Example in Rails:"></a>Example in Rails:</h4><p>Suppose you have a <code>User</code> model that handles user authentication and profile management. This violates SRP because the class has more than one responsibility. Let’s refactor it.</p><p><strong>Before:</strong></p><pre><code class="ruby">class User &lt; ApplicationRecord  def authenticate(password)    # Authentication logic  end  def update_profile(params)    # Profile update logic  endend</code></pre><p><strong>After:</strong></p><pre><code class="ruby">class User &lt; ApplicationRecordendclass UserAuthenticator  def initialize(user)    @user = user  end  def authenticate(password)    # Authentication logic  endendclass UserProfileUpdater  def initialize(user)    @user = user  end  def update_profile(params)    # Profile update logic  endend</code></pre><h3 id="O-Open-x2F-Closed-Principle-OCP"><a href="#O-Open-x2F-Closed-Principle-OCP" class="headerlink" title="O - Open&#x2F;Closed Principle (OCP)"></a>O - Open&#x2F;Closed Principle (OCP)</h3><p>The Open&#x2F;Closed Principle states that software entities should be open for extension but closed for modification. This means you should be able to add new functionality without changing existing code.</p><h4 id="Example-in-Rails-1"><a href="#Example-in-Rails-1" class="headerlink" title="Example in Rails:"></a>Example in Rails:</h4><p>Consider a <code>Payment</code> class that processes different types of payments.</p><p><strong>Before:</strong></p><pre><code class="ruby">class Payment  def process(type)    if type == &#39;credit_card&#39;      # Process credit card payment    elsif type == &#39;paypal&#39;      # Process PayPal payment    end  endend</code></pre><p><strong>After:</strong></p><pre><code class="ruby">class Payment  def process(payment_method)    payment_method.process  endendclass CreditCardPayment  def process    # Process credit card payment  endendclass PayPalPayment  def process    # Process PayPal payment  endend</code></pre><h3 id="L-Liskov-Substitution-Principle-LSP"><a href="#L-Liskov-Substitution-Principle-LSP" class="headerlink" title="L - Liskov Substitution Principle (LSP)"></a>L - Liskov Substitution Principle (LSP)</h3><p>The Liskov Substitution Principle states that objects of a superclass should be replaceable with objects of a subclass without affecting the functionality of the program.</p><h4 id="Example-in-Rails-2"><a href="#Example-in-Rails-2" class="headerlink" title="Example in Rails:"></a>Example in Rails:</h4><p>Imagine a <code>Shape</code> class hierarchy where <code>Square</code> and <code>Rectangle</code> are subclasses.</p><p><strong>Before:</strong></p><pre><code class="ruby">class Rectangle  attr_accessor :width, :height  def initialize(width, height)    @width = width    @height = height  end  def area    @width * @height  endendclass Square &lt; Rectangle  def initialize(side)    @width = side    @height = side  endend</code></pre><p><strong>After:</strong></p><pre><code class="ruby">class Shape  def area    raise NotImplementedError, &#39;You must implement the area method&#39;  endendclass Rectangle &lt; Shape  def initialize(width, height)    @width = width    @height = height  end  def area    @width * @height  endendclass Square &lt; Shape  def initialize(side)    @side = side  end  def area    @side * @side  endend</code></pre><h3 id="I-Interface-Segregation-Principle-ISP"><a href="#I-Interface-Segregation-Principle-ISP" class="headerlink" title="I - Interface Segregation Principle (ISP)"></a>I - Interface Segregation Principle (ISP)</h3><p>The Interface Segregation Principle states that no client should be forced to depend on methods it does not use. This means creating specific interfaces for different clients.</p><h4 id="Example-in-Rails-3"><a href="#Example-in-Rails-3" class="headerlink" title="Example in Rails:"></a>Example in Rails:</h4><p>Suppose you have a <code>Report</code> class that generates different types of reports.</p><p><strong>Before:</strong></p><pre><code class="ruby">class Report  def generate_pdf    # Generate PDF report  end  def generate_csv    # Generate CSV report  endend</code></pre><p><strong>After:</strong></p><pre><code class="ruby">class Reportendclass PdfReport &lt; Report  def generate    # Generate PDF report  endendclass CsvReport &lt; Report  def generate    # Generate CSV report  endend</code></pre><h3 id="D-Dependency-Inversion-Principle-DIP"><a href="#D-Dependency-Inversion-Principle-DIP" class="headerlink" title="D - Dependency Inversion Principle (DIP)"></a>D - Dependency Inversion Principle (DIP)</h3><p>The Dependency Inversion Principle states that high-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.</p><h4 id="Example-in-Rails-4"><a href="#Example-in-Rails-4" class="headerlink" title="Example in Rails:"></a>Example in Rails:</h4><p>Consider a <code>Notification</code> class that sends different types of notifications.</p><p><strong>Before:</strong></p><pre><code class="ruby">class Notification  def send_email(message)    # Send email notification  end  def send_sms(message)    # Send SMS notification  endend</code></pre><p><strong>After:</strong></p><pre><code class="ruby">class Notification  def initialize(sender)    @sender = sender  end  def send(message)    @sender.send(message)  endendclass EmailSender  def send(message)    # Send email notification  endendclass SmsSender  def send(message)    # Send SMS notification  endend</code></pre><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Applying SOLID principles in your Ruby on Rails projects can significantly improve the maintainability and flexibility of your code. By following these guidelines, you can create software that is easier to understand, extend, and modify, ultimately leading to better and more robust applications.</p><p>Happy coding!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;center&gt;
+&lt;img src=&quot;/2024/01/04/solid_principles_in_rails/solid_principles.png&quot; class=&quot;&quot; title=&quot;solid_principles&quot;&gt;
+&lt;/center&gt;
+
+&lt;br&gt;
+
+&lt;h2 id=&quot;U</summary>
+      
+    
+    
+    
+    <category term="Ruby" scheme="https://dohungthinhsts.github.io/categories/Ruby/"/>
+    
+    
+    <category term="Ruby" scheme="https://dohungthinhsts.github.io/tags/Ruby/"/>
+    
+    <category term="Software Development" scheme="https://dohungthinhsts.github.io/tags/Software-Development/"/>
+    
+    <category term="Rails" scheme="https://dohungthinhsts.github.io/tags/Rails/"/>
+    
+    <category term="SOLID" scheme="https://dohungthinhsts.github.io/tags/SOLID/"/>
+    
+  </entry>
   
   <entry>
     <title>Rediscovering Ruby - Embrace New Features for Optimal Performance</title>
