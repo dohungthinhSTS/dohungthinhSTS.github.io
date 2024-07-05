@@ -6,7 +6,7 @@
   <link href="https://dohungthinhsts.github.io/atom.xml" rel="self"/>
   
   <link href="https://dohungthinhsts.github.io/"/>
-  <updated>2024-07-04T13:21:23.566Z</updated>
+  <updated>2024-07-05T03:21:50.293Z</updated>
   <id>https://dohungthinhsts.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Deep Dive into Creational Patterns - The Abstract Factory</title>
+    <link href="https://dohungthinhsts.github.io/2024/01/12/deep_dive_abstract_factory/"/>
+    <id>https://dohungthinhsts.github.io/2024/01/12/deep_dive_abstract_factory/</id>
+    <published>2024-01-12T05:00:00.000Z</published>
+    <updated>2024-07-05T03:21:50.293Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/2024/01/12/deep_dive_abstract_factory/abstract_factory.png" class="" title="abstract_factory"></center><br><h2 id="Deep-Dive-into-Creational-Patterns-The-Abstract-Factory"><a href="#Deep-Dive-into-Creational-Patterns-The-Abstract-Factory" class="headerlink" title="Deep Dive into Creational Patterns: The Abstract Factory"></a>Deep Dive into Creational Patterns: The Abstract Factory</h2><p>Hey software designers! Today, we’re exploring the Abstract Factory pattern in depth. This pattern is a cornerstone in the world of design patterns, providing a robust way to create families of related or dependent objects without specifying their concrete classes. Let’s uncover its intricacies, benefits, and real-world applications with detailed examples.</p><h3 id="What-is-the-Abstract-Factory-Pattern"><a href="#What-is-the-Abstract-Factory-Pattern" class="headerlink" title="What is the Abstract Factory Pattern?"></a>What is the Abstract Factory Pattern?</h3><p>The Abstract Factory pattern is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. It encapsulates a group of individual factories with a common goal. In essence, the pattern defines a high-level interface to create objects, but delegates the actual creation to specific subclasses.</p><h3 id="Real-World-Scenario"><a href="#Real-World-Scenario" class="headerlink" title="Real-World Scenario"></a>Real-World Scenario</h3><p>Imagine you’re tasked with developing a cross-platform GUI application. You need to support multiple operating systems (Windows, macOS, Linux), each having its own set of UI components like buttons and checkboxes. Without a systematic approach, you might end up with a lot of platform-specific code scattered throughout your application, making it hard to maintain and extend.</p><h3 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h3><p>When building a cross-platform GUI toolkit, different platforms have different UI controls. For instance, a button in Windows looks different from a button in macOS. Hardcoding the creation of these UI elements for each platform can lead to a mess of if-else statements or switch cases, making your codebase fragile and hard to maintain.</p><h4 id="Without-Abstract-Factory"><a href="#Without-Abstract-Factory" class="headerlink" title="Without Abstract Factory"></a>Without Abstract Factory</h4><pre><code class="ruby">class Application  def initialize(os)    @os = os  end  def create_ui    if @os == &#39;Windows&#39;      button = WindowsButton.new      checkbox = WindowsCheckbox.new    elsif @os == &#39;Mac&#39;      button = MacButton.new      checkbox = MacCheckbox.new    else      raise &#39;Unknown operating system&#39;    end    button.paint    checkbox.paint  endendclass WindowsButton  def paint    puts &#39;Render a button in Windows style&#39;  endendclass WindowsCheckbox  def paint    puts &#39;Render a checkbox in Windows style&#39;  endendclass MacButton  def paint    puts &#39;Render a button in macOS style&#39;  endendclass MacCheckbox  def paint    puts &#39;Render a checkbox in macOS style&#39;  endendapp = Application.new(&#39;Windows&#39;)app.create_ui</code></pre><p><em>Drawbacks</em>: The code is tightly coupled to specific implementations and hard to extend to support new platforms.</p><h3 id="The-Solution-Abstract-Factory-Pattern"><a href="#The-Solution-Abstract-Factory-Pattern" class="headerlink" title="The Solution: Abstract Factory Pattern"></a>The Solution: Abstract Factory Pattern</h3><p>Using the Abstract Factory pattern, we can encapsulate the platform-specific creation logic into separate factory classes. This way, the client code remains agnostic to the actual product classes.</p><h4 id="With-Abstract-Factory"><a href="#With-Abstract-Factory" class="headerlink" title="With Abstract Factory"></a>With Abstract Factory</h4><p><strong>Step 1: Define Abstract Products</strong></p><pre><code class="ruby"># Abstract product interfacesclass Button  def paint    raise NotImplementedError, &quot;#&#123;self.class&#125; has not implemented method &#39;#&#123;__method__&#125;&#39;&quot;  endendclass Checkbox  def paint    raise NotImplementedError, &quot;#&#123;self.class&#125; has not implemented method &#39;#&#123;__method__&#125;&#39;&quot;  endend</code></pre><p><strong>Step 2: Create Concrete Products</strong></p><pre><code class="ruby"># Concrete product implementations for Windowsclass WindowsButton &lt; Button  def paint    puts &#39;Render a button in Windows style&#39;  endendclass WindowsCheckbox &lt; Checkbox  def paint    puts &#39;Render a checkbox in Windows style&#39;  endend# Concrete product implementations for macOSclass MacButton &lt; Button  def paint    puts &#39;Render a button in macOS style&#39;  endendclass MacCheckbox &lt; Checkbox  def paint    puts &#39;Render a checkbox in macOS style&#39;  endend</code></pre><p><strong>Step 3: Define Abstract Factory</strong></p><pre><code class="ruby"># Abstract factory interfaceclass GUIFactory  def create_button    raise NotImplementedError, &quot;#&#123;self.class&#125; has not implemented method &#39;#&#123;__method__&#125;&#39;&quot;  end  def create_checkbox    raise NotImplementedError, &quot;#&#123;self.class&#125; has not implemented method &#39;#&#123;__method__&#125;&#39;&quot;  endend</code></pre><p><strong>Step 4: Create Concrete Factories</strong></p><pre><code class="ruby"># Concrete factory implementations for Windowsclass WindowsFactory &lt; GUIFactory  def create_button    WindowsButton.new  end  def create_checkbox    WindowsCheckbox.new  endend# Concrete factory implementations for macOSclass MacFactory &lt; GUIFactory  def create_button    MacButton.new  end  def create_checkbox    MacCheckbox.new  endend</code></pre><p><strong>Step 5: Implement Client Code</strong></p><pre><code class="ruby"># Client code that uses the factoryclass Application  def initialize(factory)    @factory = factory    @button = @factory.create_button    @checkbox = @factory.create_checkbox  end  def paint    @button.paint    @checkbox.paint  endend# Example usagedef configure_application(os)  factory = case os            when &#39;Windows&#39; then WindowsFactory.new            when &#39;Mac&#39; then MacFactory.new            else raise &#39;Unknown operating system&#39;            end  app = Application.new(factory)  app.paintendconfigure_application(&#39;Windows&#39;)</code></pre><h3 id="Real-World-Benefits"><a href="#Real-World-Benefits" class="headerlink" title="Real-World Benefits"></a>Real-World Benefits</h3><p><strong>Scenario: Switching UI Themes</strong></p><p>Imagine you need to switch from a light theme to a dark theme in your application. Using the Abstract Factory pattern, you can easily create a new set of products (buttons, checkboxes, etc.) for the dark theme and switch factories without changing the client code.</p><p><strong>Without Abstract Factory:</strong></p><pre><code class="ruby">class Application  def paint    if theme == &#39;light&#39;      button = LightButton.new      checkbox = LightCheckbox.new    elsif theme == &#39;dark&#39;      button = DarkButton.new      checkbox = DarkCheckbox.new    end    button.paint    checkbox.paint  endend</code></pre><p><em>Drawbacks</em>: Code is tightly coupled, difficult to maintain, and modify.</p><p><strong>With Abstract Factory:</strong></p><pre><code class="ruby">def configure_application(theme)  factory = case theme            when &#39;light&#39; then LightThemeFactory.new            when &#39;dark&#39; then DarkThemeFactory.new            else raise &#39;Unknown theme&#39;            end  app = Application.new(factory)  app.paintend</code></pre><p><em>Benefits</em>: Clean, maintainable code with high flexibility.</p><h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>The Abstract Factory pattern is a powerful tool in the software designer’s toolkit. It helps in creating families of related objects without being tied to their concrete implementations. This pattern promotes flexibility, consistency, and decoupling, making your code easier to manage and extend. Incorporate the Abstract Factory pattern into your design strategies to build more robust and adaptable software systems.</p><p>Stay tuned for more insights into software design principles and patterns. Happy coding!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;center&gt;
+&lt;img src=&quot;/2024/01/12/deep_dive_abstract_factory/abstract_factory.png&quot; class=&quot;&quot; title=&quot;abstract_factory&quot;&gt;
+&lt;/center&gt;
+
+&lt;br&gt;
+
+&lt;h2 id=&quot;</summary>
+      
+    
+    
+    
+    <category term="Software Design" scheme="https://dohungthinhsts.github.io/categories/Software-Design/"/>
+    
+    
+    <category term="Software Development" scheme="https://dohungthinhsts.github.io/tags/Software-Development/"/>
+    
+    <category term="Software Design" scheme="https://dohungthinhsts.github.io/tags/Software-Design/"/>
+    
+    <category term="Design Patterns" scheme="https://dohungthinhsts.github.io/tags/Design-Patterns/"/>
+    
+    <category term="Abstract Factory" scheme="https://dohungthinhsts.github.io/tags/Abstract-Factory/"/>
+    
+  </entry>
   
   <entry>
     <title>Overview of Design Patterns from GOF - The Foundations of Modern Software Design</title>
