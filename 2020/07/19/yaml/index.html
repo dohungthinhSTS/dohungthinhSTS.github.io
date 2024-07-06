@@ -1,27 +1,9 @@
-<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>Yaml for Web Developers</title><meta name="description" content="The only limit is the one you set for yourself."><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
-<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="
+<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>Yaml for Web Developers</title><meta name="description" content="Sharing knowledge about software creation"><meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no,initial-scale=1"><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="
 
 
 
 As a Ruby On Rails developer, I bet you’ve seen a lot of .yml files in your project like database.yml(database configuration), en.yml(translate configuration), etc. But let’s face it, do you really know about .yml file???
-All the things I know when I start a new rails project are .yml files serve for configuration but not know why using this extension .."><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">dohungthinhtin's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Yaml for Web Developers</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#What-is-YAML"><span class="toc-text">What is YAML?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#YAML-vs-JSON"><span class="toc-text">YAML vs JSON</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Concepts-Types-Syntax"><span class="toc-text">Concepts, Types, Syntax</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-text">Conclusion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#References"><span class="toc-text">References</span></a></li></ol></div><div class="column is-9"><header class="my-4"></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">Yaml for Web Developers</h1><time class="has-text-grey" datetime="2020-07-19T05:00:00.000Z">2020-07-19</time><article class="mt-2 post-content"><center>
-<img src="/2020/07/19/yaml/xml-vs-json-vs-yaml.png" class="" title="yaml">
-</center>
-
-<p>As a Ruby On Rails developer, I bet you’ve seen a lot of .yml files in your project like database.yml(database configuration), en.yml(translate configuration), etc. But let’s face it, do you really know about .yml file???</p>
-<p>All the things I know when I start a new rails project are .yml files serve for configuration but not know why using this extension and the benefit of it.</p>
-<h1 id="What-is-YAML"><a href="#What-is-YAML" class="headerlink" title="What is YAML?"></a>What is YAML?</h1><p>Follow wikipedia, we have a definition:</p>
-<blockquote>
-<p>“YAML (a recursive acronym for “YAML Ain’t Markup Language”) is a human-readable data-serialization language” YAML (from version 1.2) is a superset of JSON and is commonly used for configuration files and in applications where data is being stored or transmitted.</p>
-</blockquote>
-<p>It means a lot, right? We use it for configuration and somehow YAML is so much more than JSON, especially about human-readable respective.</p>
-<h1 id="YAML-vs-JSON"><a href="#YAML-vs-JSON" class="headerlink" title="YAML vs JSON"></a>YAML vs JSON</h1><p>Before dive into the different, we need to know the term superset first:</p>
-<blockquote>
-<p>“Superset is A programming language that contains all the features of a given language and has been expanded or enhanced to include other features as well.” - Font</p>
-</blockquote>
-<p>If you are an FE developer, you can see the relationship between YAML and JSON is similar to TypeScript and Javascript in JS world.<br>Let’s see this example:</p>
-<pre><code class="json">&#123;
+All the things I know when I start a new rails project are .yml files serve for configuration but not know why using this extension .."><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="DoHungThinhTin" type="application/atom+xml"></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">dohungthinhtin's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Yaml for Web Developers</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#What-is-YAML"><span class="toc-text">What is YAML?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#YAML-vs-JSON"><span class="toc-text">YAML vs JSON</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Concepts-Types-Syntax"><span class="toc-text">Concepts, Types, Syntax</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-text">Conclusion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#References"><span class="toc-text">References</span></a></li></ol></div><div class="column is-9"><header class="my-4"></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">Yaml for Web Developers</h1><time class="has-text-grey" datetime="2020-07-19T05:00:00.000Z">2020-07-19</time><article class="mt-2 post-content"><center><img src="/2020/07/19/yaml/xml-vs-json-vs-yaml.png" title="yaml"></center><p>As a Ruby On Rails developer, I bet you’ve seen a lot of .yml files in your project like database.yml(database configuration), en.yml(translate configuration), etc. But let’s face it, do you really know about .yml file???</p><p>All the things I know when I start a new rails project are .yml files serve for configuration but not know why using this extension and the benefit of it.</p><h1 id="What-is-YAML"><a href="#What-is-YAML" class="headerlink" title="What is YAML?"></a>What is YAML?</h1><p>Follow wikipedia, we have a definition:</p><blockquote><p>“YAML (a recursive acronym for “YAML Ain’t Markup Language”) is a human-readable data-serialization language” YAML (from version 1.2) is a superset of JSON and is commonly used for configuration files and in applications where data is being stored or transmitted.</p></blockquote><p>It means a lot, right? We use it for configuration and somehow YAML is so much more than JSON, especially about human-readable respective.</p><h1 id="YAML-vs-JSON"><a href="#YAML-vs-JSON" class="headerlink" title="YAML vs JSON"></a>YAML vs JSON</h1><p>Before dive into the different, we need to know the term superset first:</p><blockquote><p>“Superset is A programming language that contains all the features of a given language and has been expanded or enhanced to include other features as well.” - Font</p></blockquote><p>If you are an FE developer, you can see the relationship between YAML and JSON is similar to TypeScript and Javascript in JS world.<br>Let’s see this example:</p><pre><code class="json">&#123;
   &quot;json&quot;: [
     &quot;rigid&quot;,
     &quot;better for data interchange&quot;
@@ -46,15 +28,7 @@ All the things I know when I start a new rails project are .yml files serve for 
   &quot;paragraph&quot;: &quot;Blank lines denote\nparagraph breaks\n&quot;,
   &quot;content&quot;: &quot;Or we\ncan auto\nconvert line breaks\nto save space&quot;
 &#125;
-</code></pre>
-<p>Here is an example JSON file, seems easy to read, but you can see some limitations:</p>
-<ul>
-<li>Can’t create variables.</li>
-<li>Can’t use external variables.</li>
-<li>Overrides values.</li>
-</ul>
-<p>And now, convert it to YAML syntax</p>
-<pre><code class="json">json:
+</code></pre><p>Here is an example JSON file, seems easy to read, but you can see some limitations:</p><ul><li>Can’t create variables.</li><li>Can’t use external variables.</li><li>Overrides values.</li></ul><p>And now, convert it to YAML syntax</p><pre><code class="json">json:
   - rigid
   - better for data interchange
 yaml:
@@ -73,55 +47,31 @@ content: |-
    can auto
    convert line breaks
    to save space
-</code></pre>
-<p>Hmmm, the light is flickering :smiley:</p>
-<h1 id="Concepts-Types-Syntax"><a href="#Concepts-Types-Syntax" class="headerlink" title="Concepts, Types, Syntax"></a>Concepts, Types, Syntax</h1><p>Let’s take a look in some concepts of YAML</p>
-<p><b>INDENTATION</b><br><br><br>In Yaml, indentation does matter. It uses whitespace indentation to nest information. By whitespace, keep in mind tab is not allowed.</p>
-<p><b>KEY&#x2F;VALUE</b><br><br><br>Like in JSON&#x2F;JS, YAML also uses the key&#x2F;value syntax and you can use in various ways:</p>
-<pre><code class="php">key: value
+</code></pre><p>Hmmm, the light is flickering :smiley:</p><h1 id="Concepts-Types-Syntax"><a href="#Concepts-Types-Syntax" class="headerlink" title="Concepts, Types, Syntax"></a>Concepts, Types, Syntax</h1><p>Let’s take a look in some concepts of YAML</p><p><b>INDENTATION</b><br><br><br>In Yaml, indentation does matter. It uses whitespace indentation to nest information. By whitespace, keep in mind tab is not allowed.</p><p><b>KEY&#x2F;VALUE</b><br><br><br>Like in JSON&#x2F;JS, YAML also uses the key&#x2F;value syntax and you can use in various ways:</p><pre><code class="php">key: value
 key_one: value one
 key one: value # This works but it&#39;s weird
 &#39;my key&#39;: somekey
-</code></pre>
-<p><b>COMMENTS</b><br><br><br>To write a comment in YAML, you just have to use # followed by your message content.</p>
-<pre><code class="php"># I&#39;m a comment
+</code></pre><p><b>COMMENTS</b><br><br><br>To write a comment in YAML, you just have to use # followed by your message content.</p><pre><code class="php"># I&#39;m a comment
 person: # I&#39;m also a comment
   age: 20
-</code></pre>
-<p><b>LIST</b><br><br><br>There’re 2 ways to write lists:</p>
-<ul>
-<li>The old way(JSON way): array of strings.</li>
-</ul>
-<pre><code class="php">people: [&#39;Anne&#39;, &#39;John&#39;, &#39;Max&#39;]
-</code></pre>
-<ul>
-<li>The new way(Hyphen syntax from YAML).</li>
-</ul>
-<pre><code class="php">  people:
+</code></pre><p><b>LIST</b><br><br><br>There’re 2 ways to write lists:</p><ul><li>The old way(JSON way): array of strings.</li></ul><pre><code class="php">people: [&#39;Anne&#39;, &#39;John&#39;, &#39;Max&#39;]
+</code></pre><ul><li>The new way(Hyphen syntax from YAML).</li></ul><pre><code class="php">  people:
     - Anne
     - John
     - Max
-</code></pre>
-<p><b>STRINGS</b><br><br>We have several ways to write strings in yaml:</p>
-<pre><code class="php">company: Google # Single words, no quotes
+</code></pre><p><b>STRINGS</b><br><br>We have several ways to write strings in yaml:</p><pre><code class="php">company: Google # Single words, no quotes
 full_name: John Foo Bar Doe # Full sentence, no quotes
 name: &#39;John&#39; # Using single quotes
 surname: &quot;Christian Meyer&quot; # Using double quotes
-</code></pre>
-<p>While in JSON we would have only one way to use double quotes:</p>
-<pre><code class="json">&#123;
+</code></pre><p>While in JSON we would have only one way to use double quotes:</p><pre><code class="json">&#123;
   &quot;company&quot;: &quot;Google&quot;,
   &quot;full_name&quot;: &quot;John Foo Bar Doe&quot;,
   &quot;name&quot;: &quot;John&quot;,
   &quot;surname&quot;: &quot;Christian Meyer&quot;
 &#125;
-</code></pre>
-<p><b>NUMBERS</b><br><br><br>We have two types of number in YAML: Integer and Float</p>
-<pre><code class="php">year: 2019 # Integer
+</code></pre><p><b>NUMBERS</b><br><br><br>We have two types of number in YAML: Integer and Float</p><pre><code class="php">year: 2019 # Integer
 nodeVersion: 10.8 # Float
-</code></pre>
-<p><b>NODE ANCHORS</b><br><br><br>I have no doubt if you are yawning with some information above, but please wake up because Node Anchors is an interesting feature.<br><br><br>An anchor is a mechanism to create a group of data (an object) that can be injected or extended from other objects.<br>If you’re a ruby on rails developer, I’m surely that you read that kind of feature in database.yml</p>
-<pre><code class="php">  default: &amp;default
+</code></pre><p><b>NODE ANCHORS</b><br><br><br>I have no doubt if you are yawning with some information above, but please wake up because Node Anchors is an interesting feature.<br><br><br>An anchor is a mechanism to create a group of data (an object) that can be injected or extended from other objects.<br>If you’re a ruby on rails developer, I’m surely that you read that kind of feature in database.yml</p><pre><code class="php">  default: &amp;default
     adapter: sqlite3
     pool: &lt;%= ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) &#123; 5 &#125; %&gt;
     timeout: 5000
@@ -137,17 +87,13 @@ nodeVersion: 10.8 # Float
   production:
     &lt;&lt;: *default
     database: db/production.sqlite3
-</code></pre>
-<p>But wait, take a deep eye, you may ask what the hell with:</p>
-<pre><code class="php">  default: &amp;default
+</code></pre><p>But wait, take a deep eye, you may ask what the hell with:</p><pre><code class="php">  default: &amp;default
     .
     .
     .
   development:
     &lt;&lt;: *default
-</code></pre>
-<p>Yeah, that it is, here is an anchor. If you don’t use anchor, you have to repeat the same group configuration, equivalent:</p>
-<pre><code class="php">  development:
+</code></pre><p>Yeah, that it is, here is an anchor. If you don’t use anchor, you have to repeat the same group configuration, equivalent:</p><pre><code class="php">  development:
     adapter: sqlite3
     pool: &lt;%= ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) &#123; 5 &#125; %&gt;
     timeout: 5000
@@ -164,9 +110,7 @@ nodeVersion: 10.8 # Float
     pool: &lt;%= ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) &#123; 5 &#125; %&gt;
     timeout: 5000
     database: db/production.sqlite3
-</code></pre>
-<p>So much copy&#x2F;paste here, instead of it, we create an anchor “<em>default</em>“, and inject it to another place in the YAML file.</p>
-<pre><code class="php">  default: &amp;default
+</code></pre><p>So much copy&#x2F;paste here, instead of it, we create an anchor “<em>default</em>“, and inject it to another place in the YAML file.</p><pre><code class="php">  default: &amp;default
     adapter: sqlite3
     pool: &lt;%= ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) &#123; 5 &#125; %&gt;
     timeout: 5000
@@ -174,9 +118,7 @@ nodeVersion: 10.8 # Float
   development:
     &lt;&lt;: *default
     database: db/development.sqlite3
-</code></pre>
-<p><b>JSON SYNTAX</b><br><br><br>Because YAML is a superset of JSON, it means we can write YAML by JSON way::</p>
-<pre><code class="json">&#123;
+</code></pre><p><b>JSON SYNTAX</b><br><br><br>Because YAML is a superset of JSON, it means we can write YAML by JSON way::</p><pre><code class="json">&#123;
   &quot;details&quot;: &#123;
     &quot;company&quot;: &#123;
       &quot;name&quot;: &quot;Google&quot;,
@@ -190,9 +132,7 @@ nodeVersion: 10.8 # Float
     ]
   &#125;
 &#125;
-</code></pre>
-<p><b>SHELL&#x2F;BASH ENVIRONMENT</b><br><br><br>It’s very common .yml files are used as config files for many things, but especially for CI&#x2F;CD environment.<br>In CI&#x2F;CD environment, we usually use docker for setup&#x2F;installed environment, let’s check out a docker-compose.yml file:</p>
-<pre><code class="php">version: &quot;3&quot;
+</code></pre><p><b>SHELL&#x2F;BASH ENVIRONMENT</b><br><br><br>It’s very common .yml files are used as config files for many things, but especially for CI&#x2F;CD environment.<br>In CI&#x2F;CD environment, we usually use docker for setup&#x2F;installed environment, let’s check out a docker-compose.yml file:</p><pre><code class="php">version: &quot;3&quot;
 variables:
   REDIS_IMAGE: redis
 services:
@@ -202,8 +142,4 @@ services:
       - &#39;4001:8081&#39;
   redis-server:
     image: $REDIS_IMAGE
-</code></pre>
-<p>Note that the syntax to use variables by $ isn’t from YAML but shell&#x2F;bash.<br>What GitLab CI does is getting everything you’d defined in variables and creates shell variables.</p>
-<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>Every day we see a lot of “<em>yml</em>“ files but not so sure about the benefit and how it works, I hope you found some useful information in this article.</p>
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p><a target="_blank" rel="noopener" href="https://yaml.org/">Yaml official website</a><br><a target="_blank" rel="noopener" href="https://www.json2yaml.com/">Convert Json To Yaml</a><br><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/YAML">Yaml Wikipedia</a><br><a target="_blank" rel="noopener" href="https://dev.to/raulfdm/yaml-for-web-developers-559n">Yaml blog</a></p>
-</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2023/05/02/basic-docker/" title="What is docker"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: What is docker</span></a><a class="button is-default" href="/2020/05/05/tally/" title="Ruby 2.7#tally"><span class="has-text-weight-semibold">Next: Ruby 2.7#tally</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/dohungthinhSTS"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/thinhdohung/"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><a title="linkedin" target="_blank" rel="noopener nofollow" href="//www.linkedin.com/in/thinh-hung-a74943132/"><i class="iconfont icon-linkedin"></i></a><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/thinh.dohung/"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> dohungthinhtin 2024</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"></p></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>
+</code></pre><p>Note that the syntax to use variables by $ isn’t from YAML but shell&#x2F;bash.<br>What GitLab CI does is getting everything you’d defined in variables and creates shell variables.</p><h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>Every day we see a lot of “<em>yml</em>“ files but not so sure about the benefit and how it works, I hope you found some useful information in this article.</p><h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p><a target="_blank" rel="noopener" href="https://yaml.org/">Yaml official website</a><br><a target="_blank" rel="noopener" href="https://www.json2yaml.com/">Convert Json To Yaml</a><br><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/YAML">Yaml Wikipedia</a><br><a target="_blank" rel="noopener" href="https://dev.to/raulfdm/yaml-for-web-developers-559n">Yaml blog</a></p></article><section class="jump-container is-flex is-justify-content-space-between my-6"><a class="button is-default" href="/2023/05/02/basic-docker/" title="What is docker"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: What is docker</span></a><a class="button is-default" href="/2020/05/05/tally/" title="Ruby 2.7#tally"><span class="has-text-weight-semibold">Next: Ruby 2.7#tally</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/dohungthinhSTS"><i class="iconfont icon-github"></i></a><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com/thinhdohung/"><i class="iconfont icon-ins"></i></a><a title="linkedin" target="_blank" rel="noopener nofollow" href="//www.linkedin.com/in/thinh-hung-a74943132/"><i class="iconfont icon-linkedin"></i></a><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/thinh.dohung/"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> dohungthinhtin 2024</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"></p></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>

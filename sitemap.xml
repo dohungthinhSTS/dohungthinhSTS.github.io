@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/02/24/deep_dive_visitor_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/02/29/low_coupling_high_cohesion/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/02/19/deep_dive_strategy_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/04/solid_principles_in_rails/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/05/solid_principles_in_rails_part2_fun/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/06/srp_in_rails/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/07/ocp_in_rails_detailed/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/08/lsp_in_rails_detailed/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/09/isp_in_rails_detailed/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/10/dip_in_rails_detailed/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/11/overview_of_gof_design_patterns/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/12/deep_dive_abstract_factory/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/13/deep_dive_builder_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/14/deep_dive_prototype_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/15/deep_dive_singleton_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/16/deep_dive_factory_method_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/18/deep_dive_adapter_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/20/deep_dive_bridge_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/22/deep_dive_composite_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/24/deep_dive_decorator_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/26/deep_dive_facade_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/28/deep_dive_flyweight_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/30/deep_dive_proxy_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/02/01/deep_dive_chain_of_responsibility_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/02/03/deep_dive_command_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/02/05/deep_dive_interpreter_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/02/08/deep_dive_iterator_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/02/14/deep_dive_observer_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/02/10/deep_dive_mediator_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/02/12/deep_dive_memento_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/02/17/deep_dive_state_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/02/21/deep_dive_template_method_pattern/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/02/efficiency_in_ruby/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/03/ruby-3-updated/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/01/docker-compose/</loc>
+    
+    <lastmod>2024-07-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2023/05/10/create-rails-by-docker/</loc>
+    
+    <lastmod>2024-07-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2023/05/02/basic-docker/</loc>
+    
+    <lastmod>2024-07-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2020/07/19/yaml/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2020/05/05/tally/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2017/11/02/ethereum/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/2017/11/02/dapp/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://dohungthinhsts.github.io/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/rails/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Docker/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Ruby/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Programming/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/DevOps/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Rails/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/SOLID/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/GOF/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Software-Design/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Design-Patterns/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Adapter-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Software-Development/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Abstract-Factory/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Bridge-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Builder-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Chain-of-Responsibility-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Command-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Composite-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Decorator-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Facade-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Factory-Method-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Flyweight-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Interpreter-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Iterator-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Mediator-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Memento-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Observer-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Prototype-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Proxy-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Singleton-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/State-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Strategy-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Template-Method-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Visitor-Pattern/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Low-Coupling/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/High-Cohesion/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/categories/Docker/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/categories/BlockChain/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/categories/Ruby/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/categories/Yaml/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/categories/Software-Design/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+</urlset>
