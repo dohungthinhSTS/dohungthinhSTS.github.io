@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/09/isp_in_rails_detailed/</loc>
+    
+    <lastmod>2024-09-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dohungthinhsts.github.io/2024/02/29/low_coupling_high_cohesion/</loc>
     
     <lastmod>2024-07-06</lastmod>
@@ -66,15 +75,6 @@
   
   <url>
     <loc>https://dohungthinhsts.github.io/2024/01/08/lsp_in_rails_detailed/</loc>
-    
-    <lastmod>2024-07-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dohungthinhsts.github.io/2024/01/09/isp_in_rails_detailed/</loc>
     
     <lastmod>2024-07-05</lastmod>
     
@@ -373,7 +373,7 @@
 
   <url>
     <loc>https://dohungthinhsts.github.io/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -381,252 +381,266 @@
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/rails/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Docker/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Ruby/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Programming/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/DevOps/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Rails/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/SOLID/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/GOF/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Software-Design/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Design-Patterns/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Adapter-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Software-Development/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Abstract-Factory/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Bridge-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Builder-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Chain-of-Responsibility-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Command-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Composite-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Decorator-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Facade-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Factory-Method-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Flyweight-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Interpreter-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Iterator-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Mediator-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Memento-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Observer-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Prototype-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Proxy-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Singleton-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/State-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Strategy-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Template-Method-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Visitor-Pattern/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Low-Coupling/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/High-Cohesion/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/SOLID-Principles/</loc>
+    <lastmod>2024-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Liskov-Substitution-Principle/</loc>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -635,35 +649,35 @@
   
   <url>
     <loc>https://dohungthinhsts.github.io/categories/Docker/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/categories/BlockChain/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/categories/Ruby/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/categories/Yaml/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dohungthinhsts.github.io/categories/Software-Design/</loc>
-    <lastmod>2024-07-06</lastmod>
+    <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
