@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/07/ocp_in_rails_detailed/</loc>
+    
+    <lastmod>2024-09-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dohungthinhsts.github.io/2024/01/06/srp_in_rails/</loc>
     
     <lastmod>2024-09-09</lastmod>
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://dohungthinhsts.github.io/2024/01/08/lsp_in_realworld_detailed/</loc>
+    <loc>https://dohungthinhsts.github.io/2024/01/09/isp_in_rails_detailed/</loc>
     
     <lastmod>2024-09-09</lastmod>
     
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://dohungthinhsts.github.io/2024/01/09/isp_in_rails_detailed/</loc>
+    <loc>https://dohungthinhsts.github.io/2024/01/08/lsp_in_rails_detailed/</loc>
     
     <lastmod>2024-09-09</lastmod>
     
@@ -66,15 +75,6 @@
   
   <url>
     <loc>https://dohungthinhsts.github.io/2024/01/05/solid_principles_in_rails_part2_fun/</loc>
-    
-    <lastmod>2024-07-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dohungthinhsts.github.io/2024/01/07/ocp_in_rails_detailed/</loc>
     
     <lastmod>2024-07-05</lastmod>
     
@@ -647,6 +647,20 @@
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Single-Responsibility-Principle/</loc>
+    <lastmod>2024-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Interface-Segregation-Principle/</loc>
+    <lastmod>2024-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Open-Closed-Principle/</loc>
     <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
