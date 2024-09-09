@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/08/lsp_in_rails_detailed/</loc>
+    
+    <lastmod>2024-09-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dohungthinhsts.github.io/2024/01/09/isp_in_rails_detailed/</loc>
     
     <lastmod>2024-09-09</lastmod>
@@ -66,15 +75,6 @@
   
   <url>
     <loc>https://dohungthinhsts.github.io/2024/01/07/ocp_in_rails_detailed/</loc>
-    
-    <lastmod>2024-07-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dohungthinhsts.github.io/2024/01/08/lsp_in_rails_detailed/</loc>
     
     <lastmod>2024-07-05</lastmod>
     
