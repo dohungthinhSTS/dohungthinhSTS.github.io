@@ -51,6 +51,42 @@
   </entry>
   
   <entry>
+    <title>Understanding Value Objects in Domain-Driven Design</title>
+    <link href="https://dohungthinhsts.github.io/2024/09/09/understanding-value-objects/"/>
+    <id>https://dohungthinhsts.github.io/2024/09/09/understanding-value-objects/</id>
+    <published>2024-09-09T05:00:00.000Z</published>
+    <updated>2024-09-09T12:00:02.792Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/2024/09/09/understanding-value-objects/value-object.png" class="" title="value-object"></center><br><h2 id="Understanding-Value-Objects-in-Domain-Driven-Design"><a href="#Understanding-Value-Objects-in-Domain-Driven-Design" class="headerlink" title="Understanding Value Objects in Domain-Driven Design"></a>Understanding Value Objects in Domain-Driven Design</h2><p>Hello, fellow software designers! Today, we’re diving into <strong>Value Objects</strong>, a key concept in Domain-Driven Design (DDD) that helps make your software more expressive and maintainable. Let’s explore what value objects are, why they matter, and how to use them effectively in your applications.</p><h3 id="What-Are-Value-Objects"><a href="#What-Are-Value-Objects" class="headerlink" title="What Are Value Objects?"></a>What Are Value Objects?</h3><p>A <strong>Value Object</strong> is a small, immutable object that represents a simple entity like a currency, date, or measurement. Unlike entities, value objects have no unique identity — they are defined entirely by their attributes. If two value objects have the same attributes, they are considered equal.</p><h3 id="Why-Use-Value-Objects"><a href="#Why-Use-Value-Objects" class="headerlink" title="Why Use Value Objects?"></a>Why Use Value Objects?</h3><ol><li><strong>Encapsulation of Logic</strong>: Encapsulate related behavior (like currency conversions or validations) to avoid scattered logic across the codebase.</li><li><strong>Immutability</strong>: Make objects immutable to prevent accidental changes, leading to safer, more predictable code.</li><li><strong>Improved Clarity</strong>: Communicate the intent of the domain more clearly by using meaningful objects rather than primitive types.</li><li><strong>Reduced Duplication</strong>: Centralize domain logic in one place, reducing repetition and making the code easier to maintain.</li></ol><h3 id="Real-World-Example-Money-Handling-in-E-Commerce"><a href="#Real-World-Example-Money-Handling-in-E-Commerce" class="headerlink" title="Real-World Example: Money Handling in E-Commerce"></a>Real-World Example: Money Handling in E-Commerce</h3><p>Consider an e-commerce application where you need to handle prices in different currencies. Instead of storing prices as raw numbers, you create a <code>Money</code> value object:</p><pre><code class="ruby">class Money  attr_reader :amount, :currency  def initialize(amount, currency)    @amount = amount    @currency = currency  end  def convert_to(new_currency)    # Conversion logic here  end  def +(other)    # Addition logic here  end  def ==(other)    amount == other.amount &amp;&amp; currency == other.currency  endend</code></pre><h3 id="Benefits-of-Using-Value-Objects"><a href="#Benefits-of-Using-Value-Objects" class="headerlink" title="Benefits of Using Value Objects"></a>Benefits of Using Value Objects</h3><ol><li><strong>Centralized Logic and Fewer Bugs</strong>: All money-related logic is centralized, reducing the risk of errors from duplicated or scattered logic.</li><li><strong>Easier Testing</strong>: You can easily unit-test the <code>Money</code> class without worrying about the rest of the application.</li><li><strong>Better Extensibility</strong>: New behavior (like handling a new currency) can be added to the <code>Money</code> class without modifying the entire application.</li><li><strong>Expressiveness</strong>: Code that uses <code>Money</code> is more expressive and understandable (<code>price = Money.new(100, &#39;USD&#39;)</code>) than primitive types (<code>price = 100</code>).</li></ol><h3 id="Challenges-and-When-to-Use-Value-Objects"><a href="#Challenges-and-When-to-Use-Value-Objects" class="headerlink" title="Challenges and When to Use Value Objects"></a>Challenges and When to Use Value Objects</h3><ol><li><strong>Learning Curve</strong>: Developers new to Domain-Driven Design may find value objects abstract.</li><li><strong>Overhead</strong>: Using many value objects can add perceived overhead, especially in simple applications.</li><li><strong>When to Use</strong>: Use value objects when you want to encapsulate logic around simple attributes (like money, dates, measurements) and prevent logic from being scattered across the application.</li></ol><h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p><strong>Value Objects</strong> are powerful tools in domain modeling that encapsulate related behavior, reduce duplication, and improve code clarity. By using value objects, you make your code more expressive, maintainable, and aligned with the business domain.</p><p>Stay tuned for more insights into software design principles and patterns!</p><p><em>Thôi Lo Code Đi Kẻo Sếp nạt!!</em></p><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;center&gt;
+&lt;img src=&quot;/2024/09/09/understanding-value-objects/value-object.png&quot; class=&quot;&quot; title=&quot;value-object&quot;&gt;
+&lt;/center&gt;
+
+&lt;br&gt;
+
+&lt;h2 id=&quot;Underst</summary>
+      
+    
+    
+    
+    <category term="Software Design" scheme="https://dohungthinhsts.github.io/categories/Software-Design/"/>
+    
+    
+    <category term="Software-Design" scheme="https://dohungthinhsts.github.io/tags/Software-Design/"/>
+    
+    <category term="Software-Development" scheme="https://dohungthinhsts.github.io/tags/Software-Development/"/>
+    
+    <category term="Domain-Driven-Design" scheme="https://dohungthinhsts.github.io/tags/Domain-Driven-Design/"/>
+    
+    <category term="Value-Objects" scheme="https://dohungthinhsts.github.io/tags/Value-Objects/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Achieving Low Coupling and High Cohesion in Software Design</title>
     <link href="https://dohungthinhsts.github.io/2024/02/29/low_coupling_high_cohesion/"/>
     <id>https://dohungthinhsts.github.io/2024/02/29/low_coupling_high_cohesion/</id>
@@ -685,42 +721,6 @@
     <category term="Software-Development" scheme="https://dohungthinhsts.github.io/tags/Software-Development/"/>
     
     <category term="Bridge-Pattern" scheme="https://dohungthinhsts.github.io/tags/Bridge-Pattern/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Deep Dive into Structural Patterns - The Adapter Pattern</title>
-    <link href="https://dohungthinhsts.github.io/2024/01/18/deep_dive_adapter_pattern/"/>
-    <id>https://dohungthinhsts.github.io/2024/01/18/deep_dive_adapter_pattern/</id>
-    <published>2024-01-18T05:00:00.000Z</published>
-    <updated>2024-07-05T07:36:23.867Z</updated>
-    
-    <content type="html"><![CDATA[<center><img src="/2024/01/18/deep_dive_adapter_pattern/adapter_pattern.png" class="" title="adapter_pattern"></center><br><h2 id="Deep-Dive-into-Structural-Patterns-The-Adapter-Pattern"><a href="#Deep-Dive-into-Structural-Patterns-The-Adapter-Pattern" class="headerlink" title="Deep Dive into Structural Patterns - The Adapter Pattern."></a>Deep Dive into Structural Patterns - The Adapter Pattern.</h2><p>  Hey software designers! Today, we’re diving into the Adapter pattern. This pattern allows incompatible interfaces to work together, providing a flexible solution to interface mismatches. Let’s explore its workings, benefits, and real-world applications with detailed examples.</p><h3 id="What-is-the-Adapter-Pattern"><a href="#What-is-the-Adapter-Pattern" class="headerlink" title="What is the Adapter Pattern?"></a>What is the Adapter Pattern?</h3><p>The Adapter pattern is a structural design pattern that allows objects with incompatible interfaces to work together. It acts as a bridge between two incompatible interfaces by wrapping an existing class with a new interface.</p><h3 id="Real-World-Scenario"><a href="#Real-World-Scenario" class="headerlink" title="Real-World Scenario"></a>Real-World Scenario</h3><p>Imagine you’re developing a payment processing system that needs to integrate with multiple third-party payment gateways. Each payment gateway has a different API, making it challenging to integrate them directly into your system.</p><h3 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h3><p>When integrating multiple third-party services with different interfaces, directly using these services can lead to a tangled and hard-to-maintain codebase. Hardcoding the integration logic can result in tightly coupled and inflexible code.</p><h4 id="Without-Adapter-Pattern"><a href="#Without-Adapter-Pattern" class="headerlink" title="Without Adapter Pattern"></a>Without Adapter Pattern</h4><pre><code class="ruby">class PayPalPayment  def send_payment(amount)    puts &quot;Sending payment of #&#123;amount&#125; via PayPal&quot;  endendclass StripePayment  def process_payment(amount)    puts &quot;Processing payment of #&#123;amount&#125; via Stripe&quot;  endendclass PaymentProcessor  def process(amount, gateway)    case gateway    when &#39;PayPal&#39;      PayPalPayment.new.send_payment(amount)    when &#39;Stripe&#39;      StripePayment.new.process_payment(amount)    else      raise &#39;Unknown payment gateway&#39;    end  endendprocessor = PaymentProcessor.newprocessor.process(100, &#39;PayPal&#39;)processor.process(200, &#39;Stripe&#39;)</code></pre><p><em>Drawbacks</em>: The code is tightly coupled to specific implementations and hard to extend to support new payment gateways.</p><h3 id="The-Solution-Adapter-Pattern"><a href="#The-Solution-Adapter-Pattern" class="headerlink" title="The Solution: Adapter Pattern"></a>The Solution: Adapter Pattern</h3><p>Using the Adapter pattern, we can create a unified interface for different payment gateways, making the code more flexible and maintainable.</p><h4 id="With-Adapter-Pattern"><a href="#With-Adapter-Pattern" class="headerlink" title="With Adapter Pattern"></a>With Adapter Pattern</h4><p><strong>Step 1: Define the Target Interface</strong></p><pre><code class="ruby">class PaymentGateway  def pay(amount)    raise NotImplementedError, &quot;#&#123;self.class&#125; has not implemented method &#39;#&#123;__method__&#125;&#39;&quot;  endend</code></pre><p><strong>Step 2: Create Adapters for Each Payment Gateway</strong></p><pre><code class="ruby">class PayPalAdapter &lt; PaymentGateway  def initialize(paypal_payment)    @paypal_payment = paypal_payment  end  def pay(amount)    @paypal_payment.send_payment(amount)  endendclass StripeAdapter &lt; PaymentGateway  def initialize(stripe_payment)    @stripe_payment = stripe_payment  end  def pay(amount)    @stripe_payment.process_payment(amount)  endend</code></pre><p><strong>Step 3: Implement Client Code</strong></p><pre><code class="ruby">class PaymentProcessor  def initialize(gateway)    @gateway = gateway  end  def process(amount)    @gateway.pay(amount)  endendpaypal = PayPalAdapter.new(PayPalPayment.new)stripe = StripeAdapter.new(StripePayment.new)processor = PaymentProcessor.new(paypal)processor.process(100)processor = PaymentProcessor.new(stripe)processor.process(200)</code></pre><p><em>Benefits</em>: Promotes loose coupling and makes the code more flexible and maintainable.</p><h3 id="Real-World-Benefits"><a href="#Real-World-Benefits" class="headerlink" title="Real-World Benefits"></a>Real-World Benefits</h3><p><strong>Scenario: Adding New Payment Gateways</strong></p><p>Imagine you need to add a new payment gateway (e.g., Square). Using the Adapter pattern, you can easily introduce a new adapter for the Square payment gateway without modifying the existing code.</p><p><strong>Without Adapter Pattern:</strong></p><pre><code class="ruby">class PaymentProcessor  def process(amount, gateway)    case gateway    when &#39;PayPal&#39;      PayPalPayment.new.send_payment(amount)    when &#39;Stripe&#39;      StripePayment.new.process_payment(amount)    when &#39;Square&#39;      SquarePayment.new.make_payment(amount)    else      raise &#39;Unknown payment gateway&#39;    end  endendclass SquarePayment  def make_payment(amount)    puts &quot;Making payment of #&#123;amount&#125; via Square&quot;  endend</code></pre><p><em>Drawbacks</em>: Tightly coupled code that is difficult to maintain and extend.</p><p><strong>With Adapter Pattern:</strong></p><pre><code class="ruby">class SquareAdapter &lt; PaymentGateway  def initialize(square_payment)    @square_payment = square_payment  end  def pay(amount)    @square_payment.make_payment(amount)  endendsquare = SquareAdapter.new(SquarePayment.new)processor = PaymentProcessor.new(square)processor.process(300)</code></pre><p><em>Benefits</em>: Clean, maintainable code with high flexibility and extensibility.</p><h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>The Adapter pattern is a powerful tool for allowing incompatible interfaces to work together. It promotes flexibility, maintainability, and loose coupling in your code. By using the Adapter pattern, you can easily integrate third-party services and components with different interfaces into your system. Incorporate the Adapter pattern into your design strategies to build more robust and adaptable software systems.</p><p>Stay tuned for more insights into software design principles and patterns.</p><p>Thôi Lo Code Đi Kẻo Sếp nạt!</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;center&gt;
-&lt;img src=&quot;/2024/01/18/deep_dive_adapter_pattern/adapter_pattern.png&quot; class=&quot;&quot; title=&quot;adapter_pattern&quot;&gt;
-&lt;/center&gt;
-
-&lt;br&gt;
-
-&lt;h2 id=&quot;Dee</summary>
-      
-    
-    
-    
-    <category term="Software Design" scheme="https://dohungthinhsts.github.io/categories/Software-Design/"/>
-    
-    
-    <category term="Software-Design" scheme="https://dohungthinhsts.github.io/tags/Software-Design/"/>
-    
-    <category term="Design-Patterns" scheme="https://dohungthinhsts.github.io/tags/Design-Patterns/"/>
-    
-    <category term="Adapter-Pattern" scheme="https://dohungthinhsts.github.io/tags/Adapter-Pattern/"/>
-    
-    <category term="Software-Development" scheme="https://dohungthinhsts.github.io/tags/Software-Development/"/>
     
   </entry>
   
