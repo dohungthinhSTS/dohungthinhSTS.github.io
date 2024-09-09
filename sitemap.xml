@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dohungthinhsts.github.io/2024/01/10/dip_in_rails_detailed/</loc>
+    
+    <lastmod>2024-09-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dohungthinhsts.github.io/2024/01/07/ocp_in_rails_detailed/</loc>
     
     <lastmod>2024-09-09</lastmod>
@@ -75,15 +84,6 @@
   
   <url>
     <loc>https://dohungthinhsts.github.io/2024/01/05/solid_principles_in_rails_part2_fun/</loc>
-    
-    <lastmod>2024-07-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dohungthinhsts.github.io/2024/01/10/dip_in_rails_detailed/</loc>
     
     <lastmod>2024-07-05</lastmod>
     
@@ -661,6 +661,13 @@
   
   <url>
     <loc>https://dohungthinhsts.github.io/tags/Open-Closed-Principle/</loc>
+    <lastmod>2024-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohungthinhsts.github.io/tags/Dependency-Inversion-Principle/</loc>
     <lastmod>2024-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
