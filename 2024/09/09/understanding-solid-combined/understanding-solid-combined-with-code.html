@@ -1,0 +1,99 @@
+<hr>
+<h2 id="layout-posttitle-“How-a-Single-Example-Can-Illustrate-Multiple-SOLID-Principles”author-Thinh-Do-Hungdate-2024-09-09-12-00-00-0700category-Software-Designtags-Software-Design-SOLID-Principles-Software-Developmentkeywords-Software-Design-SOLID-Principles-SRP-OCP-LSP-ISP-DIP-Software-Development"><a href="#layout-posttitle-“How-a-Single-Example-Can-Illustrate-Multiple-SOLID-Principles”author-Thinh-Do-Hungdate-2024-09-09-12-00-00-0700category-Software-Designtags-Software-Design-SOLID-Principles-Software-Developmentkeywords-Software-Design-SOLID-Principles-SRP-OCP-LSP-ISP-DIP-Software-Development" class="headerlink" title="layout: posttitle:  “How a Single Example Can Illustrate Multiple SOLID Principles”author: Thinh-Do Hungdate:   2024-09-09 12:00:00 +0700category: Software Designtags:  - Software-Design  - SOLID-Principles  - Software-Developmentkeywords: Software Design, SOLID Principles, SRP, OCP, LSP, ISP, DIP, Software Development"></a>layout: post<br>title:  “How a Single Example Can Illustrate Multiple SOLID Principles”<br>author: Thinh-Do Hung<br>date:   2024-09-09 12:00:00 +0700<br>category: Software Design<br>tags:<br>  - Software-Design<br>  - SOLID-Principles<br>  - Software-Development<br>keywords: Software Design, SOLID Principles, SRP, OCP, LSP, ISP, DIP, Software Development</h2><center>
+{% asset_img solid-example.svg solid-example %}
+</center>
+
+<br>
+
+<h2 id="How-a-Single-Example-Can-Illustrate-Multiple-SOLID-Principles"><a href="#How-a-Single-Example-Can-Illustrate-Multiple-SOLID-Principles" class="headerlink" title="How a Single Example Can Illustrate Multiple SOLID Principles"></a>How a Single Example Can Illustrate Multiple SOLID Principles</h2><p>Hello, fellow software designers! Today, we’re going to explore an interesting insight: <strong>A single example can often illustrate multiple SOLID principles</strong>. These principles are deeply interrelated, and applying one principle often leads to compliance with others. Let’s see how!</p>
+<h3 id="Understanding-How-SOLID-Principles-Interconnect"><a href="#Understanding-How-SOLID-Principles-Interconnect" class="headerlink" title="Understanding How SOLID Principles Interconnect"></a>Understanding How SOLID Principles Interconnect</h3><p>The SOLID principles aim to achieve the same overarching goals — <strong>maintainability, flexibility, and clarity</strong> in software design. Here’s how they connect:</p>
+<ul>
+<li><strong>Single Responsibility Principle (SRP)</strong>: Encourages separating responsibilities, inherently reducing coupling.</li>
+<li><strong>Open&#x2F;Closed Principle (OCP)</strong>: Promotes extension over modification, often involving using abstractions, aligning with the <strong>Dependency Inversion Principle (DIP)</strong>.</li>
+<li><strong>Liskov Substitution Principle (LSP)</strong>: Ensures that subclasses can stand in for their base classes, a natural outcome of following OCP and DIP.</li>
+<li><strong>Interface Segregation Principle (ISP)</strong>: Splits large interfaces into smaller, specific ones, supporting SRP and enabling easier substitution (LSP).</li>
+<li><strong>Dependency Inversion Principle (DIP)</strong>: Relies on abstractions rather than concrete implementations, which helps keep modules closed for modification but open for extension (OCP).</li>
+</ul>
+<h3 id="Example-Construction-Project-Management"><a href="#Example-Construction-Project-Management" class="headerlink" title="Example: Construction Project Management"></a>Example: Construction Project Management</h3><p>Let’s revisit our <strong>Construction Project Management</strong> example, which was initially used to illustrate the <strong>Dependency Inversion Principle (DIP)</strong>:</p>
+<h4 id="The-Example-Construction-Project-Management"><a href="#The-Example-Construction-Project-Management" class="headerlink" title="The Example: Construction Project Management"></a>The Example: Construction Project Management</h4><p>We have a structure like this:</p>
+<ul>
+<li><strong>Worker Interface</strong>: An interface defining a general <code>perform_work</code> method.</li>
+<li><strong>Specific Workers</strong>: Classes like <code>Electrician</code>, <code>Plumber</code>, and <code>Carpenter</code> that implement the <code>Worker</code> interface.</li>
+<li><strong>Project Manager</strong>: A class that depends on the <code>Worker</code> interface instead of specific worker classes.</li>
+</ul>
+<p>Here is how the code looks:</p>
+<pre><code class="ruby"># Define the Worker interface
+class Worker
+  def perform_work
+    raise NotImplementedError, &quot;Subclasses must implement the perform_work method&quot;
+  end
+end
+
+# Specific implementations of workers
+class Electrician &lt; Worker
+  def perform_work
+    &quot;Performing electrical installations...&quot;
+  end
+end
+
+class Plumber &lt; Worker
+  def perform_work
+    &quot;Handling plumbing tasks...&quot;
+  end
+end
+
+class Carpenter &lt; Worker
+  def perform_work
+    &quot;Managing woodwork and fittings...&quot;
+  end
+end
+
+# Project Manager depends on the abstraction (Worker interface)
+class ProjectManager
+  def initialize(worker)
+    @worker = worker
+  end
+
+  def manage_work
+    @worker.perform_work
+  end
+end
+
+# Example usage
+electrician = Electrician.new
+manager = ProjectManager.new(electrician)
+puts manager.manage_work  # Output: &quot;Performing electrical installations...&quot;
+</code></pre>
+<h4 id="How-This-Example-Illustrates-Multiple-Principles"><a href="#How-This-Example-Illustrates-Multiple-Principles" class="headerlink" title="How This Example Illustrates Multiple Principles"></a>How This Example Illustrates Multiple Principles</h4><ol>
+<li><p><strong>Single Responsibility Principle (SRP)</strong></p>
+<ul>
+<li>Each worker class (<code>Electrician</code>, <code>Plumber</code>, <code>Carpenter</code>) has a single responsibility: performing its specific type of work.</li>
+<li>The <code>ProjectManager</code> class is only responsible for managing work, not for knowing the details of each type of work.</li>
+</ul>
+</li>
+<li><p><strong>Open&#x2F;Closed Principle (OCP)</strong></p>
+<ul>
+<li>The <code>ProjectManager</code> class is closed for modification but open for extension. You can add new worker types (like <code>Painter</code>) without modifying the <code>ProjectManager</code> class.</li>
+</ul>
+</li>
+<li><p><strong>Liskov Substitution Principle (LSP)</strong></p>
+<ul>
+<li>Any worker class (<code>Electrician</code>, <code>Plumber</code>, <code>Carpenter</code>) can replace the <code>Worker</code> interface without affecting the <code>ProjectManager</code>‘s functionality. The <code>ProjectManager</code> is designed to work with any class that adheres to the <code>Worker</code> interface.</li>
+</ul>
+</li>
+<li><p><strong>Interface Segregation Principle (ISP)</strong></p>
+<ul>
+<li>By having a specific interface (<code>Worker</code>), we avoid forcing the <code>Electrician</code> class to implement methods related to plumbing or carpentry, aligning with the idea of not forcing clients to depend on methods they do not use.</li>
+</ul>
+</li>
+<li><p><strong>Dependency Inversion Principle (DIP)</strong></p>
+<ul>
+<li>The high-level <code>ProjectManager</code> class depends on an abstraction (<code>Worker</code>) rather than concrete classes (<code>Electrician</code>, <code>Plumber</code>). The details (how each worker does their job) depend on the abstraction.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>A single, well-thought-out example can demonstrate how multiple SOLID principles work together to create a robust, maintainable, and flexible design. These principles complement each other, often leading to designs that naturally satisfy more than one principle.</p>
+<p>By understanding how these principles interrelate, you can build systems that are both easier to develop and maintain over time. The key is to think holistically about your design, ensuring it is coherent and aligns with these principles to the greatest extent possible.</p>
+<p>Stay tuned for more insights into software design principles and patterns!</p>
+<p><em>Thôi Lo Code Đi Kẻo Sếp nạt!!</em></p>
+<hr>
