@@ -6,7 +6,7 @@
   <link href="https://dohungthinhsts.github.io/atom.xml" rel="self"/>
   
   <link href="https://dohungthinhsts.github.io/"/>
-  <updated>2024-07-06T03:13:11.754Z</updated>
+  <updated>2024-09-09T09:30:29.200Z</updated>
   <id>https://dohungthinhsts.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How a Single Example Can Illustrate Multiple SOLID Principles</title>
+    <link href="https://dohungthinhsts.github.io/2024/09/09/understanding-solid-combined/"/>
+    <id>https://dohungthinhsts.github.io/2024/09/09/understanding-solid-combined/</id>
+    <published>2024-09-09T05:00:00.000Z</published>
+    <updated>2024-09-09T09:30:29.200Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/2024/09/09/understanding-solid-combined/solid-example.png" class="" title="solid-example"></center><br><h2 id="How-a-Single-Example-Can-Illustrate-Multiple-SOLID-Principles"><a href="#How-a-Single-Example-Can-Illustrate-Multiple-SOLID-Principles" class="headerlink" title="How a Single Example Can Illustrate Multiple SOLID Principles"></a>How a Single Example Can Illustrate Multiple SOLID Principles</h2><p>Hello, fellow software designers! Today, we’re going to explore an interesting insight: <strong>A single example can often illustrate multiple SOLID principles</strong>. These principles are deeply interrelated, and applying one principle often leads to compliance with others. Let’s see how!</p><h3 id="Understanding-How-SOLID-Principles-Interconnect"><a href="#Understanding-How-SOLID-Principles-Interconnect" class="headerlink" title="Understanding How SOLID Principles Interconnect"></a>Understanding How SOLID Principles Interconnect</h3><p>The SOLID principles aim to achieve the same overarching goals — <strong>maintainability, flexibility, and clarity</strong> in software design. Here’s how they connect:</p><ul><li><strong>Single Responsibility Principle (SRP)</strong>: Encourages separating responsibilities, inherently reducing coupling.</li><li><strong>Open&#x2F;Closed Principle (OCP)</strong>: Promotes extension over modification, often involving using abstractions, aligning with the <strong>Dependency Inversion Principle (DIP)</strong>.</li><li><strong>Liskov Substitution Principle (LSP)</strong>: Ensures that subclasses can stand in for their base classes, a natural outcome of following OCP and DIP.</li><li><strong>Interface Segregation Principle (ISP)</strong>: Splits large interfaces into smaller, specific ones, supporting SRP and enabling easier substitution (LSP).</li><li><strong>Dependency Inversion Principle (DIP)</strong>: Relies on abstractions rather than concrete implementations, which helps keep modules closed for modification but open for extension (OCP).</li></ul><h3 id="Example-Construction-Project-Management"><a href="#Example-Construction-Project-Management" class="headerlink" title="Example: Construction Project Management"></a>Example: Construction Project Management</h3><p>Let’s revisit our <strong>Construction Project Management</strong> example, which was initially used to illustrate the <strong>Dependency Inversion Principle (DIP)</strong>:</p><h4 id="The-Example-Construction-Project-Management"><a href="#The-Example-Construction-Project-Management" class="headerlink" title="The Example: Construction Project Management"></a>The Example: Construction Project Management</h4><ul><li><strong>Worker Interface</strong>: An interface defining a general <code>perform_work</code> method.</li><li><strong>Specific Workers</strong>: Classes like <code>Electrician</code>, <code>Plumber</code>, and <code>Carpenter</code> that implement the <code>Worker</code> interface.</li><li><strong>Project Manager</strong>: A class that depends on the <code>Worker</code> interface instead of specific worker classes.</li></ul><h4 id="How-This-Example-Illustrates-Multiple-Principles"><a href="#How-This-Example-Illustrates-Multiple-Principles" class="headerlink" title="How This Example Illustrates Multiple Principles"></a>How This Example Illustrates Multiple Principles</h4><ol><li><p><strong>Single Responsibility Principle (SRP)</strong></p><ul><li>Each worker class (<code>Electrician</code>, <code>Plumber</code>, <code>Carpenter</code>) has a single responsibility: performing its specific type of work.</li><li>The <code>ProjectManager</code> class is only responsible for managing work, not for knowing the details of each type of work.</li></ul></li><li><p><strong>Open&#x2F;Closed Principle (OCP)</strong></p><ul><li>The <code>ProjectManager</code> class is closed for modification but open for extension. You can add new worker types (like <code>Painter</code>) without modifying the <code>ProjectManager</code> class.</li></ul></li><li><p><strong>Liskov Substitution Principle (LSP)</strong></p><ul><li>Any worker class (<code>Electrician</code>, <code>Plumber</code>, <code>Carpenter</code>) can replace the <code>Worker</code> interface without affecting the <code>ProjectManager</code>‘s functionality. The <code>ProjectManager</code> is designed to work with any class that adheres to the <code>Worker</code> interface.</li></ul></li><li><p><strong>Interface Segregation Principle (ISP)</strong></p><ul><li>By having a specific interface (<code>Worker</code>), we avoid forcing the <code>Electrician</code> class to implement methods related to plumbing or carpentry, aligning with the idea of not forcing clients to depend on methods they do not use.</li></ul></li><li><p><strong>Dependency Inversion Principle (DIP)</strong></p><ul><li>The high-level <code>ProjectManager</code> class depends on an abstraction (<code>Worker</code>) rather than concrete classes (<code>Electrician</code>, <code>Plumber</code>). The details (how each worker does their job) depend on the abstraction.</li></ul></li></ol><h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>A single, well-thought-out example can demonstrate how multiple SOLID principles work together to create a robust, maintainable, and flexible design. These principles complement each other, often leading to designs that naturally satisfy more than one principle.</p><p>By understanding how these principles interrelate, you can build systems that are both easier to develop and maintain over time. The key is to think holistically about your design, ensuring it is coherent and aligns with these principles to the greatest extent possible.</p><p>Stay tuned for more insights into software design principles and patterns!</p><p><em>Thôi Lo Code Đi Kẻo Sếp nạt!!</em></p><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;center&gt;
+&lt;img src=&quot;/2024/09/09/understanding-solid-combined/solid-example.png&quot; class=&quot;&quot; title=&quot;solid-example&quot;&gt;
+&lt;/center&gt;
+
+&lt;br&gt;
+
+&lt;h2 id=&quot;How-</summary>
+      
+    
+    
+    
+    <category term="Software Design" scheme="https://dohungthinhsts.github.io/categories/Software-Design/"/>
+    
+    
+    <category term="Software-Design" scheme="https://dohungthinhsts.github.io/tags/Software-Design/"/>
+    
+    <category term="Software-Development" scheme="https://dohungthinhsts.github.io/tags/Software-Development/"/>
+    
+    <category term="SOLID-Principles" scheme="https://dohungthinhsts.github.io/tags/SOLID-Principles/"/>
+    
+  </entry>
   
   <entry>
     <title>Achieving Low Coupling and High Cohesion in Software Design</title>
@@ -687,38 +721,6 @@
     <category term="Adapter-Pattern" scheme="https://dohungthinhsts.github.io/tags/Adapter-Pattern/"/>
     
     <category term="Software-Development" scheme="https://dohungthinhsts.github.io/tags/Software-Development/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Deep Dive into Creational Patterns - The Factory Method Pattern</title>
-    <link href="https://dohungthinhsts.github.io/2024/01/16/deep_dive_factory_method_pattern/"/>
-    <id>https://dohungthinhsts.github.io/2024/01/16/deep_dive_factory_method_pattern/</id>
-    <published>2024-01-16T05:00:00.000Z</published>
-    <updated>2024-07-05T07:36:23.867Z</updated>
-    
-    <content type="html"><![CDATA[<center><img src="/2024/01/16/deep_dive_factory_method_pattern/factory_method_pattern.png" class="" title="factory_method_pattern"></center><br><h2 id="Deep-Dive-into-Creational-Patterns-The-Factory-Method-Pattern"><a href="#Deep-Dive-into-Creational-Patterns-The-Factory-Method-Pattern" class="headerlink" title="Deep Dive into Creational Patterns - The Factory Method Pattern."></a>Deep Dive into Creational Patterns - The Factory Method Pattern.</h2><p>  Hey software designers! Today, we’re exploring the Factory Method pattern. This pattern provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created. Let’s dive into its workings, benefits, and real-world applications with detailed examples.</p><h3 id="What-is-the-Factory-Method-Pattern"><a href="#What-is-the-Factory-Method-Pattern" class="headerlink" title="What is the Factory Method Pattern?"></a>What is the Factory Method Pattern?</h3><p>The Factory Method pattern is a creational design pattern that defines an interface for creating an object but allows subclasses to alter the type of objects that will be created. The Factory Method pattern promotes loose coupling by eliminating the need to bind application-specific classes into the code, allowing the code to refer to the newly created objects through their common interface.</p><h3 id="Real-World-Scenario"><a href="#Real-World-Scenario" class="headerlink" title="Real-World Scenario"></a>Real-World Scenario</h3><p>Imagine you’re developing a document editor that supports different types of documents (Word, PDF, Excel). Each type of document requires a different way of opening, editing, and saving. Without a systematic approach, you might end up with tightly coupled code that is hard to maintain and extend.</p><h3 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h3><p>When an application needs to create instances of multiple derived classes, hardcoding the object creation logic can lead to a tightly coupled and inflexible codebase. This approach makes it difficult to introduce new types or change existing types without modifying the existing code.</p><h4 id="Without-Factory-Method-Pattern"><a href="#Without-Factory-Method-Pattern" class="headerlink" title="Without Factory Method Pattern"></a>Without Factory Method Pattern</h4><pre><code class="ruby">class DocumentEditor  def open_document(type)    case type    when &#39;Word&#39;      WordDocument.new.open    when &#39;PDF&#39;      PDFDocument.new.open    when &#39;Excel&#39;      ExcelDocument.new.open    else      raise &#39;Unknown document type&#39;    end  endendclass WordDocument  def open    puts &#39;Opening Word document...&#39;  endendclass PDFDocument  def open    puts &#39;Opening PDF document...&#39;  endendclass ExcelDocument  def open    puts &#39;Opening Excel document...&#39;  endendeditor = DocumentEditor.neweditor.open_document(&#39;Word&#39;)editor.open_document(&#39;PDF&#39;)</code></pre><p><em>Drawbacks</em>: The code is tightly coupled to specific implementations and hard to extend.</p><h3 id="The-Solution-Factory-Method-Pattern"><a href="#The-Solution-Factory-Method-Pattern" class="headerlink" title="The Solution: Factory Method Pattern"></a>The Solution: Factory Method Pattern</h3><p>Using the Factory Method pattern, we can delegate the responsibility of creating objects to subclasses, promoting flexibility and extensibility.</p><h4 id="With-Factory-Method-Pattern"><a href="#With-Factory-Method-Pattern" class="headerlink" title="With Factory Method Pattern"></a>With Factory Method Pattern</h4><p><strong>Step 1: Define the Product Interface</strong></p><pre><code class="ruby">class Document  def open    raise NotImplementedError, &quot;#&#123;self.class&#125; has not implemented method &#39;#&#123;__method__&#125;&#39;&quot;  endend</code></pre><p><strong>Step 2: Create Concrete Products</strong></p><pre><code class="ruby">class WordDocument &lt; Document  def open    puts &#39;Opening Word document...&#39;  endendclass PDFDocument &lt; Document  def open    puts &#39;Opening PDF document...&#39;  endendclass ExcelDocument &lt; Document  def open    puts &#39;Opening Excel document...&#39;  endend</code></pre><p><strong>Step 3: Define the Creator Interface</strong></p><pre><code class="ruby">class DocumentCreator  def create_document    raise NotImplementedError, &quot;#&#123;self.class&#125; has not implemented method &#39;#&#123;__method__&#125;&#39;&quot;  end  def open_document    document = create_document    document.open  endend</code></pre><p><strong>Step 4: Implement Concrete Creators</strong></p><pre><code class="ruby">class WordDocumentCreator &lt; DocumentCreator  def create_document    WordDocument.new  endendclass PDFDocumentCreator &lt; DocumentCreator  def create_document    PDFDocument.new  endendclass ExcelDocumentCreator &lt; DocumentCreator  def create_document    ExcelDocument.new  endend</code></pre><p><strong>Step 5: Implement Client Code</strong></p><pre><code class="ruby">word_creator = WordDocumentCreator.newword_creator.open_documentpdf_creator = PDFDocumentCreator.newpdf_creator.open_documentexcel_creator = ExcelDocumentCreator.newexcel_creator.open_document</code></pre><p><em>Benefits</em>: Promotes loose coupling, making the code more flexible and easier to extend.</p><h3 id="Real-World-Benefits"><a href="#Real-World-Benefits" class="headerlink" title="Real-World Benefits"></a>Real-World Benefits</h3><p><strong>Scenario: Adding New Document Types</strong></p><p>Imagine you need to add a new type of document (e.g., TextDocument). Using the Factory Method pattern, you can easily introduce new document types without modifying the existing code.</p><p><strong>Without Factory Method Pattern:</strong></p><pre><code class="ruby">class DocumentEditor  def open_document(type)    case type    when &#39;Word&#39;      WordDocument.new.open    when &#39;PDF&#39;      PDFDocument.new.open    when &#39;Excel&#39;      ExcelDocument.new.open    when &#39;Text&#39;      TextDocument.new.open    else      raise &#39;Unknown document type&#39;    end  endendclass TextDocument  def open    puts &#39;Opening Text document...&#39;  endend</code></pre><p><em>Drawbacks</em>: Tightly coupled code that is difficult to maintain and extend.</p><p><strong>With Factory Method Pattern:</strong></p><pre><code class="ruby">class TextDocument &lt; Document  def open    puts &#39;Opening Text document...&#39;  endendclass TextDocumentCreator &lt; DocumentCreator  def create_document    TextDocument.new  endendtext_creator = TextDocumentCreator.newtext_creator.open_document</code></pre><p><em>Benefits</em>: Clean, maintainable code with high flexibility and extensibility.</p><h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>The Factory Method pattern is a powerful tool for creating objects in a flexible and extensible manner. It promotes loose coupling and enhances the maintainability of your code. By using the Factory Method pattern, you can easily introduce new types and alter existing ones without modifying the existing code. Incorporate the Factory Method pattern into your design strategies to build more robust and adaptable software systems.</p><p>Stay tuned for more insights into software design principles and patterns.</p><p>Thôi Lo Code Đi Kẻo Sếp nạt!</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;center&gt;
-&lt;img src=&quot;/2024/01/16/deep_dive_factory_method_pattern/factory_method_pattern.png&quot; class=&quot;&quot; title=&quot;factory_method_pattern&quot;&gt;
-&lt;/cente</summary>
-      
-    
-    
-    
-    <category term="Software Design" scheme="https://dohungthinhsts.github.io/categories/Software-Design/"/>
-    
-    
-    <category term="Software-Design" scheme="https://dohungthinhsts.github.io/tags/Software-Design/"/>
-    
-    <category term="Design-Patterns" scheme="https://dohungthinhsts.github.io/tags/Design-Patterns/"/>
-    
-    <category term="Software-Development" scheme="https://dohungthinhsts.github.io/tags/Software-Development/"/>
-    
-    <category term="Factory-Method Pattern" scheme="https://dohungthinhsts.github.io/tags/Factory-Method-Pattern/"/>
     
   </entry>
   
